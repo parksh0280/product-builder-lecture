@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/style.css">
     <script>tailwind.config={darkMode:'class'}</script>
 </head>
-<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
                     <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
                     <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
@@ -35,24 +35,30 @@
             <div class="inline-flex p-4 bg-blue-100 dark:bg-blue-900/30 rounded-2xl text-blue-600 mb-6">
                 <i data-lucide="users" class="w-10 h-10"></i>
             </div>
-            <h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6">About Us</h1>
-            <p class="text-2xl text-slate-600 dark:text-slate-400">최고의 효율을 지향하는 개발자들을 위한 가이드</p>
+            <h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">About Us</h1>
+            <p class="text-2xl text-slate-600 dark:text-slate-400">최고의 효율을 지향하는 개발자들을 위한 기술 허브</p>
         </div>
 
-        <div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 text-lg leading-relaxed space-y-12">
-            <div class="p-10 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+        <div class="space-y-12">
+            <div class="p-10 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl leading-relaxed">
                 <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">ModernDevKit의 미션</h2>
-                <p>ModernDevKit은 빠르게 변화하는 기술 생태계 속에서 개발자들이 본질에 집중할 수 있도록 돕기 위해 탄생했습니다. 우리는 단순히 최신 기술을 소개하는 것을 넘어, <strong>'어떻게 하면 더 효율적으로 일할 수 있는가?'</strong>라는 질문에 대한 실질적인 답을 찾아갑니다.</p>
+                <p class="text-lg text-slate-600 dark:text-slate-400">ModernDevKit은 빠르게 변화하는 기술 생태계 속에서 개발자들이 본질에 집중할 수 있도록 돕기 위해 탄생했습니다. 우리는 단순히 최신 기술을 소개하는 것을 넘어, **'어떻게 하면 더 효율적으로 일할 수 있는가?'**라는 질문에 대한 실질적인 답을 찾아가는 과정을 공유합니다. 모든 콘텐츠는 실제 개발 환경에서의 경험을 바탕으로 작성됩니다.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg">
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg group hover:border-blue-500 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                        <i data-lucide="eye" class="w-6 h-6"></i>
+                    </div>
                     <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our Vision</h3>
-                    <p>단순한 도구 소개를 넘어, 지속 가능한 개발 문화를 연구하고 공유하여 전 세계 개발자들의 삶의 질을 높이는 데 기여합니다.</p>
+                    <p class="text-slate-600 dark:text-slate-400">단순한 도구 소개를 넘어, 지속 가능한 개발 문화를 연구하고 공유하여 전 세계 개발자들의 삶의 질과 생산성을 높이는 데 기여하는 최고의 리소스 센터가 되는 것입니다.</p>
                 </div>
-                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our Core Value</h3>
-                    <p>실제 사용해본 경험을 바탕으로 한 검증된 데이터만을 제공하며, 독창성과 실용성을 최고의 가치로 삼습니다.</p>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg group hover:border-indigo-500 transition-colors">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 mb-6">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our Value</h3>
+                    <p class="text-slate-600 dark:text-slate-400">우리는 실용성, 독창성, 그리고 정직함을 최고의 가치로 삼습니다. 실제 사용해본 경험이 없는 도구는 추천하지 않으며, 개발자의 실제 워크플로우에 즉각적인 도움이 되는 정보만을 엄선합니다.</p>
                 </div>
             </div>
         </div>

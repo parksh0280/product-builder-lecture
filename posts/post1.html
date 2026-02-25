@@ -1,97 +1,76 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F2RZ3S4QH0');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026년 VS Code 확장 프로그램 10선: 생산성 극대화 가이드 | ModernDevKit</title>
+    <title>2026년 VS Code 확장 프로그램 10선 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-4286055195982585">
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="../index.html" class="logo">ModernDevKit</a>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../privacy.html">Privacy</a></li>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-switch">🌙 Dark</button>
+                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                </button>
             </nav>
         </div>
     </header>
-    <main class="container page-content">
-        <div class="post-header">
-            <span class="tag">Productivity</span>
-            <h1>2026년 개발자를 위한 VS Code 최적의 확장 프로그램 10선</h1>
-            <div class="post-meta">작성일: 2026년 2월 25일 · 작성자: ModernDevKit Editorial Team</div>
-        </div>
-        
-        <p class="lead">Visual Studio Code는 단순한 텍스트 에디터를 넘어섰습니다. 전 세계 개발자의 70% 이상이 사용하는 이 도구의 진정한 힘은 '확장 프로그램'에 있습니다. 하지만 수만 개의 확장 프로그램 중 정말로 가치 있는 것을 골라내는 것은 쉽지 않습니다. 2026년 현재, 최신 트렌드와 기술적 요구사항을 반영한 10가지 필수 도구를 심층 분석합니다.</p>
 
-        <hr style="margin: 2rem 0; opacity: 0.1;">
+    <main class="py-20 max-w-3xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <header class="mb-12">
+                <div class="flex items-center gap-2 text-blue-600 font-bold text-sm mb-4 uppercase tracking-wider">
+                    <i data-lucide="tag" class="w-4 h-4"></i> Productivity
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">2026년 개발자를 위한 VS Code 최적의 확장 프로그램 10선</h1>
+                <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 25</div>
+                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Admin</div>
+                </div>
+            </header>
 
-        <h2>1. GitHub Copilot & Chat: AI 페어 프로그래밍의 완성</h2>
-        <p>GitHub Copilot은 이제 단순한 자동 완성을 넘어 개발자의 사고 과정을 보조합니다. 2026년 버전의 Copilot은 프로젝트의 전체 컨텍스트를 이해하여 보안 취약점을 미리 경고하고, 복잡한 비즈니스 로직을 유닛 테스트 코드와 함께 제안합니다. 특히 Copilot Chat은 '사이드바에 있는 시니어 개발자' 역할을 수행하며 코드의 의미를 설명하고 리팩토링 전략을 제시합니다.</p>
-        
-        <h2>2. Prettier - Code Formatter: 팀 협업의 근간</h2>
-        <p>코드 품질은 가독성에서 시작됩니다. Prettier는 일관된 코드 스타일을 유지하여 팀원 간의 불필요한 코드 리뷰 논쟁을 제거합니다. 세미콜론 사용 여부, 따옴표 스타일, 들여쓰기 수준 등을 프로젝트 설정 파일(.prettierrc) 하나로 통일할 수 있습니다. 저장 시 자동 정렬 기능은 이제 선택이 아닌 필수입니다.</p>
-        
-        <h2>3. Error Lens: 실시간 피드백의 혁명</h2>
-        <p>기존에는 에러를 확인하기 위해 터미널이나 에디터 하단의 창을 봐야 했습니다. Error Lens는 에러, 경고, 힌트를 코드 라인 바로 옆에 인라인으로 표시합니다. 이는 개발자가 문맥을 잃지 않고 즉시 실수를 수정하게 함으로써 평균 개발 시간을 15% 이상 단축시키는 효과를 가져옵니다.</p>
-        
-        <h2>4. GitLens: 소스 제어의 시각화</h2>
-        <p>GitLens는 Git 기능을 VS Code 내부로 완벽하게 통합합니다. 특정 코드를 누가, 언제, 왜 작성했는지 알려주는 'Blame' 기능은 기본입니다. 2026년의 GitLens는 브랜치 간의 복잡한 충돌 가능성을 미리 예측하고 시각화된 그래프를 통해 프로젝트의 히스토리를 한눈에 파악할 수 있게 돕습니다.</p>
-        
-        <h2>5. Peacock: 다중 프로젝트 관리의 달인</h2>
-        <p>여러 개의 VS Code 창을 띄워놓고 작업할 때, 어떤 창이 프론트엔드고 어떤 창이 백엔드인지 헷갈린 경험이 있을 것입니다. Peacock은 각 워크스페이스마다 고유한 테마 색상을 지정하여 시각적으로 즉시 구분할 수 있게 합니다. 이는 컨텍스트 스위칭 비용을 획기적으로 낮춰줍니다.</p>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8">
+                <p class="text-xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">Visual Studio Code는 단순한 텍스트 에디터를 넘어섰습니다. 전 세계 개발자의 70% 이상이 사용하는 이 도구의 진정한 힘은 '확장 프로그램'에 있습니다.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">1. GitHub Copilot & Chat: AI 페어 프로그래밍의 완성</h2>
+                <p>GitHub Copilot은 이제 단순한 자동 완성을 넘어 개발자의 사고 과정을 보조합니다. 2026년 버전의 Copilot은 프로젝트의 전체 컨텍스트를 이해하여 보안 취약점을 미리 경고합니다.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">2. Prettier - Code Formatter: 팀 협업의 근간</h2>
+                <p>코드 품질은 가독성에서 시작됩니다. Prettier는 일관된 코드 스타일을 유지하여 팀원 간의 불필요한 코드 리뷰 논쟁을 제거합니다.</p>
 
-        <h2>6. Thunder Client: 가벼운 API 테스트 클라이언트</h2>
-        <p>Postman이나 Insomnia 같은 별도의 무거운 도구를 실행할 필요가 없습니다. Thunder Client는 VS Code 내부에서 동작하는 매우 가볍고 직관적인 GUI 기반 REST API 테스트 도구입니다. 컬렉션 관리와 환경 변수 설정을 통해 효율적인 백엔드 개발 및 테스트를 지원합니다.</p>
+                <h2 class="text-2xl font-bold mt-12 mb-6">3. Error Lens: 실시간 피드백의 혁명</h2>
+                <p>기존에는 에러를 확인하기 위해 터미널 창을 봐야 했지만, Error Lens는 코드 라인 바로 옆에 인라인으로 에러를 표시합니다.</p>
 
-        <h2>7. Better Comments: 주석 가독성의 향상</h2>
-        <p>주석은 코드만큼 중요합니다. Better Comments는 TODO, 중요(Alert), 질문(Question), 제거 예정(Strikethrough) 등의 유형에 따라 주석의 색상을 다르게 표시합니다. 이를 통해 팀원들이 주석의 의도를 시각적으로 즉시 이해할 수 있게 합니다.</p>
+                <div class="mt-16 p-8 bg-blue-50 dark:bg-blue-900/20 rounded-3xl border border-blue-100 dark:border-blue-800">
+                    <h3 class="text-xl font-bold text-blue-900 dark:text-blue-100 mb-4">마치며</h3>
+                    <p class="text-blue-800 dark:text-blue-200">도구는 목적이 아닌 수단입니다. 하지만 최상의 수단은 목적지에 도달하는 시간을 단축해 줍니다. 생산성의 변화는 작은 도구의 선택에서 시작됩니다.</p>
+                </div>
+            </div>
 
-        <h2>8. Path Intellisense: 경로 입력의 정확도</h2>
-        <p>파일이나 디렉토리 경로를 수동으로 입력하다 발생하는 오타는 런타임 에러의 주범입니다. Path Intellisense는 파일 경로를 입력할 때 자동 완성을 지원하며, 프로젝트 내의 복잡한 파일 구조를 쉽게 탐색할 수 있도록 돕습니다.</p>
-
-        <h2>9. Docker: 컨테이너 관리의 통합</h2>
-        <p>마이크로서비스 아키텍처가 보편화된 현재, VS Code 내부에서 Docker 컨테이너를 관리하는 것은 생산성에 큰 도움이 됩니다. 이미지 빌드, 컨테이너 실행, 로그 확인 등을 명령어가 아닌 GUI를 통해 손쉽게 수행할 수 있습니다.</p>
-
-        <h2>10. Polacode: 아름다운 코드 공유</h2>
-        <p>내가 작성한 훌륭한 코드를 팀원이나 블로그에 공유하고 싶을 때, 단순히 텍스트를 복사하는 것보다 아름다운 이미지가 더 효과적입니다. Polacode는 현재 선택한 코드를 세련된 디자인의 스크린샷으로 만들어줍니다. 문서화나 기술 공유 문화 정착에 유용합니다.</p>
-
-        <div class="post-conclusion">
-            <h2>마치며</h2>
-            <p>도구는 목적이 아닌 수단입니다. 하지만 최상의 수단은 목적지에 도달하는 시간을 단축해 줍니다. 위 10가지 확장 프로그램 중 본인의 작업 스타일에 맞는 것을 선택하여 설치해 보시기 바랍니다. 생산성의 변화는 작은 도구의 선택에서 시작됩니다.</p>
-        </div>
-
-        <a href="../index.html" class="back-link">&larr; 목록으로 돌아가기</a>
+            <footer class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../blog.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기
+                </a>
+            </footer>
+        </article>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="../about.html">소개</a>
-                <a href="../blog.html">블로그</a>
-                <a href="../contact.html">문의</a>
-                <a href="../privacy.html">개인정보처리방침</a>
-            </div>
-            <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
-        </div>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 py-16 text-center text-slate-600 dark:text-slate-400">
+        &copy; 2026 ModernDevKit. All rights reserved.
     </footer>
     <script src="../js/main.js"></script>
 </body>
