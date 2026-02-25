@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                </ul>
+                <button id="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
+            </nav>
+        </div>
+    </header>
+    <main class="py-20 max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">FAQ</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400">자주 묻는 질문과 답변</p>
+        </div>
+        <div class="space-y-6">
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">콘텐츠의 주기는 어떻게 되나요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">ModernDevKit은 매주 최소 1회 이상의 고품질 기술 아티클과 가이드를 발행하고 있습니다. 뉴스레터를 구독하시면 가장 빠르게 소식을 받아보실 수 있습니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">제휴 및 협업이 가능한가요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">네, 가능합니다. Contact 페이지를 통해 문의를 남겨주시면 검토 후 연락드리겠습니다. 개발자 생산성 향상에 도움이 되는 제품이나 서비스라면 언제든 환영합니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">사용된 기술 스택이 무엇인가요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">본 사이트는 성능을 위해 순수 HTML, Tailwind CSS, JavaScript로 구축되었으며, Cloudflare Pages를 통해 고속 배포되고 있습니다.</p>
+            </details>
+        </div>
+    </main>
+    <footer class="py-16 text-center text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
+        &copy; 2026 ModernDevKit. All rights reserved.
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>튜토리얼 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                </ul>
+                <button id="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
+            </nav>
+        </div>
+    </header>
+    <main class="py-20 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">Step-by-Step Tutorials</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400">실무에 바로 적용 가능한 실전 튜토리얼 가이드</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i data-lucide="terminal"></i></div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">CLI 생산성 마스터하기</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">Zsh, Tmux, 그리고 Neovim을 조합하여 마우스 없는 개발 환경을 구축하는 완벽한 가이드를 제공합니다.</p>
+                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i data-lucide="layout"></i></div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Next.js & Tailwind 최적화</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6">성능을 극대화하고 SEO를 최적화하며, 재사용 가능한 컴포넌트 아키텍처를 설계하는 방법을 배웁니다.</p>
+                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer class="py-16 text-center text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
+        &copy; 2026 ModernDevKit. All rights reserved.
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
