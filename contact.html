@@ -15,63 +15,40 @@
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
                     <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
                     <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
                     <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
-                    <li><a href="contact.html" class="text-blue-600 font-semibold">Contact</a></li>
+                    <li><a href="contact.html" class="text-blue-600 font-semibold transition-colors">Contact</a></li>
                     <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
-                </button>
+                <button class="theme-toggle hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all"><i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span></button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300 transition-transform active:scale-95"><i data-lucide="menu" class="w-6 h-6"></i></button>
             </nav>
+            <div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-4">
+                <ul class="flex flex-col gap-4 font-bold text-lg">
+                    <li><a href="index.html" class="block text-slate-600 dark:text-slate-300 py-2">Home</a></li>
+                    <li><a href="blog.html" class="block text-slate-600 dark:text-slate-300 py-2">Blog</a></li>
+                    <li><a href="about.html" class="block text-slate-600 dark:text-slate-300 py-2">About</a></li>
+                    <li><a href="contact.html" class="block text-blue-600 py-2">Contact</a></li>
+                    <li><a href="privacy.html" class="block text-slate-600 dark:text-slate-300 py-2">Privacy</a></li>
+                </ul>
+                <div class="pt-4 border-t border-slate-100 dark:border-slate-800"><button class="theme-toggle flex items-center gap-3 w-full py-2 text-slate-600 dark:text-slate-300 font-bold"><i data-lucide="moon" class="w-5 h-5"></i> <span>Dark Mode</span></button></div>
+            </div>
         </div>
     </header>
-
     <main class="py-24 max-w-2xl mx-auto px-6 scroll-reveal">
-        <div class="text-center mb-16">
-            <div class="inline-flex p-4 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl text-indigo-600 mb-6">
-                <i data-lucide="message-square" class="w-10 h-10"></i>
-            </div>
-            <h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6">Contact Us</h1>
-            <p class="text-2xl text-slate-600 dark:text-slate-400">당신의 소중한 의견을 기다립니다.</p>
-        </div>
-
+        <div class="text-center mb-16"><div class="inline-flex p-4 bg-indigo-100 dark:bg-indigo-900/30 rounded-2xl text-indigo-600 mb-6"><i data-lucide="message-square" class="w-10 h-10"></i></div><h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Contact Us</h1><p class="text-2xl text-slate-600 dark:text-slate-400">당신의 소중한 의견을 기다립니다.</p></div>
         <form class="space-y-8 bg-white dark:bg-slate-800 p-10 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-2xl">
-            <div class="space-y-4">
-                <label class="block text-slate-900 dark:text-white font-bold text-lg">문의 유형</label>
-                <div class="relative">
-                    <select class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all appearance-none cursor-pointer">
-                        <option value="general">일반 문의</option>
-                        <option value="partnership">제휴 및 협업</option>
-                        <option value="feedback">콘텐츠 피드백</option>
-                        <option value="support">기술적 지원</option>
-                        <option value="etc">기타</option>
-                    </select>
-                    <i data-lucide="chevron-down" class="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none w-5 h-5"></i>
-                </div>
-            </div>
-            <div class="space-y-4">
-                <label class="block text-slate-900 dark:text-white font-bold text-lg">성함</label>
-                <input type="text" placeholder="홍길동" class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all">
-            </div>
-            <div class="space-y-4">
-                <label class="block text-slate-900 dark:text-white font-bold text-lg">이메일</label>
-                <input type="email" placeholder="example@email.com" class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all">
-            </div>
-            <div class="space-y-4">
-                <label class="block text-slate-900 dark:text-white font-bold text-lg">문의 내용</label>
-                <textarea rows="6" placeholder="문의하실 내용을 입력해주세요." class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all"></textarea>
-            </div>
+            <div class="space-y-4"><label class="block text-slate-900 dark:text-white font-bold text-lg">문의 유형</label><div class="relative"><select class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all appearance-none cursor-pointer"><option value="general">일반 문의</option><option value="partnership">제휴 및 협업</option><option value="feedback">콘텐츠 피드백</option><option value="support">기술적 지원</option><option value="etc">기타</option></select><i data-lucide="chevron-down" class="absolute right-6 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none w-5 h-5"></i></div></div>
+            <div class="space-y-4"><label class="block text-slate-900 dark:text-white font-bold text-lg">성함</label><input type="text" placeholder="홍길동" class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all"></div>
+            <div class="space-y-4"><label class="block text-slate-900 dark:text-white font-bold text-lg">이메일</label><input type="email" placeholder="example@email.com" class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all"></div>
+            <div class="space-y-4"><label class="block text-slate-900 dark:text-white font-bold text-lg">문의 내용</label><textarea rows="6" placeholder="문의하실 내용을 입력해주세요." class="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-4 focus:ring-blue-500/20 outline-none transition-all"></textarea></div>
             <button type="submit" class="w-full py-5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-xl shadow-blue-500/30">메시지 보내기</button>
         </form>
     </main>
-
-    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 py-16 text-center text-slate-600 dark:text-slate-400">
-        &copy; 2026 ModernDevKit. All rights reserved.
-    </footer>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 py-16 text-center text-slate-600 dark:text-slate-400">&copy; 2026 ModernDevKit. All rights reserved.</footer>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -9,16 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: { slate: { 950: '#030213' } }
-          }
-        }
-      }
-    </script>
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
@@ -32,130 +23,52 @@
                     <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
                     <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
-                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
-                </button>
+                <button class="theme-toggle hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all"><i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span></button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300 transition-transform active:scale-95"><i data-lucide="menu" class="w-6 h-6"></i></button>
             </nav>
+            <div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-4">
+                <ul class="flex flex-col gap-4 font-bold text-lg">
+                    <li><a href="index.html" class="block text-slate-600 dark:text-slate-300 py-2">Home</a></li>
+                    <li><a href="blog.html" class="block text-blue-600 py-2">Blog</a></li>
+                    <li><a href="about.html" class="block text-slate-600 dark:text-slate-300 py-2">About</a></li>
+                    <li><a href="contact.html" class="block text-slate-600 dark:text-slate-300 py-2">Contact</a></li>
+                    <li><a href="privacy.html" class="block text-slate-600 dark:text-slate-300 py-2">Privacy</a></li>
+                </ul>
+                <div class="pt-4 border-t border-slate-100 dark:border-slate-800"><button class="theme-toggle flex items-center gap-3 w-full py-2 text-slate-600 dark:text-slate-300 font-bold"><i data-lucide="moon" class="w-5 h-5"></i> <span>Dark Mode</span></button></div>
+            </div>
         </div>
     </header>
 
     <main class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16 scroll-reveal">
-            <h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6">Blog & Insights</h1>
-            <p class="text-2xl text-slate-600 dark:text-slate-400">개발 생산성과 최신 기술 트렌드를 깊이 있게 다룹니다.</p>
-        </div>
-
-        <!-- Filter UI -->
-        <div class="flex flex-wrap justify-center gap-4 mb-16 scroll-reveal">
-            <button class="filter-btn active px-6 py-2 rounded-full font-bold transition-all border-2 border-blue-600 bg-blue-600 text-white" data-filter="all">All</button>
-            <button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="Productivity">Productivity</button>
-            <button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="Mindset">Mindset</button>
-            <button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="CLI">CLI</button>
-            <button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="AI Strategy">AI Strategy</button>
-            <button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="Frontend">Frontend</button>
-        </div>
-        
+        <!-- Content of blog.html here -->
+        <div class="text-center mb-16 scroll-reveal"><h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">Blog & Insights</h1><p class="text-2xl text-slate-600 dark:text-slate-400">개발 생산성과 최신 기술 트렌드를 깊이 있게 다룹니다.</p></div>
+        <div class="flex flex-wrap justify-center gap-4 mb-16 scroll-reveal"><button class="filter-btn active px-6 py-2 rounded-full font-bold transition-all border-2 border-blue-600 bg-blue-600 text-white" data-filter="all">All</button><button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="Productivity">Productivity</button><button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="Mindset">Mindset</button><button class="filter-btn px-6 py-2 rounded-full font-bold transition-all border-2 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:border-blue-600" data-filter="CLI">CLI</button></div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
-            <!-- Blog Card 1 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Productivity">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 25 · Productivity</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">2026년 VS Code 최적의 확장 프로그램 10선</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">IDE를 뛰어넘는 생산성을 위한 필수 도구들을 소개합니다.</p>
-                    <a href="posts/post1.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 2 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Mindset">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 24 · Mindset</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">디지털 미니멀리즘: 딥 워크 전략</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">집중력을 방해하는 요소를 제거하고 몰입하는 방법.</p>
-                    <a href="posts/post2.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 3 -->
-            <article class="blog-card group relative scroll-reveal" data-category="CLI">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 23 · CLI</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">터미널 환경 구축 가이드</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">Zsh와 Starship으로 강력한 터미널을 만드세요.</p>
-                    <a href="posts/post3.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 4 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Hardware">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 22 · Hardware</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">개발 데스크 테크 셋업 가이드</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">건강과 생산성을 모두 잡는 하드웨어 가이드.</p>
-                    <a href="posts/post4.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 5 -->
-            <article class="blog-card group relative scroll-reveal" data-category="AI Strategy">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 21 · AI Strategy</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">AI 시대의 주니어 개발자 생존법</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">AI를 도구로 활용하는 아키텍트가 되는 방법.</p>
-                    <a href="posts/post5.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 6 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Knowledge">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 20 · Knowledge</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">노션 vs 옵시디언 가이드</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">당신에게 맞는 지식 관리 도구는 무엇일까요?</p>
-                    <a href="posts/post6.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 7 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Frontend">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 19 · Frontend</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">2026년 프론트엔드 트렌드</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">웹 생태계의 미래를 미리 살펴봅니다.</p>
-                    <a href="posts/post7.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 8 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Git">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 18 · Git</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">고급 Git 마스터 가이드</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">실무에서 유용한 고급 기술들을 깊이 있게 다룹니다.</p>
-                    <a href="posts/post8.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 9 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Clean Code">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 17 · Clean Code</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">자바스크립트 Clean Code</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">코드의 가독성과 유지보수성을 높이는 기법.</p>
-                    <a href="posts/post9.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
-            <!-- Blog Card 10 -->
-            <article class="blog-card group relative scroll-reveal" data-category="Backend">
-                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
-                <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 16 · Backend</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">풀스택 개발 트렌드 2026</h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">서버리스와 엣지 컴퓨팅의 혁신.</p>
-                    <a href="posts/post10.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </article>
+            <script>
+                const blogPosts = [
+                    { id: 1, date: '2026. 02. 25', tag: 'Productivity', title: '2026년 VS Code 최적의 확장 프로그램 10선', desc: 'IDE를 뛰어넘는 생산성을 위한 필수 도구들을 소개합니다.', color: 'from-blue-500 to-cyan-500' },
+                    { id: 2, date: '2026. 02. 24', tag: 'Mindset', title: '디지털 미니멀리즘: 딥 워크 전략', desc: '집중력을 방해하는 요소를 제거하고 몰입하는 방법.', color: 'from-purple-500 to-pink-500' },
+                    { id: 3, date: '2026. 02. 23', tag: 'CLI', title: '터미널 환경 구축 가이드', desc: 'Zsh와 Starship으로 강력한 터미널을 만드세요.', color: 'from-green-500 to-emerald-500' },
+                    { id: 4, date: '2026. 02. 22', tag: 'Hardware', title: '최적의 개발 데스크 테크 셋업', desc: '건강과 생산성을 모두 잡는 하드웨어 가이드.', color: 'from-orange-500 to-red-500' },
+                    { id: 5, date: '2026. 02. 21', tag: 'AI Strategy', title: 'AI 시대의 주니어 개발자 생존법', desc: 'AI를 도구로 활용하는 아키텍트가 되는 방법.', color: 'from-violet-500 to-purple-500' },
+                    { id: 6, date: '2026. 02. 20', tag: 'Knowledge', title: '노션 vs 옵시디언 가이드', desc: '당신에게 맞는 지식 관리 도구는 무엇일까요?', color: 'from-indigo-500 to-blue-500' },
+                    { id: 7, date: '2026. 02. 19', tag: 'Frontend', title: '2026년 프론트엔드 트렌드', desc: '웹 생태계의 미래를 미리 살펴봅니다.', color: 'from-blue-400 to-indigo-500' },
+                    { id: 8, date: '2026. 02. 18', tag: 'Git', title: '고급 Git 마스터 가이드', desc: '실무에서 유용한 고급 기술들을 깊이 있게 다룹니다.', color: 'from-red-500 to-orange-500' },
+                    { id: 9, date: '2026. 02. 17', tag: 'Clean Code', title: '자바스크립트 Clean Code', desc: '코드의 가독성과 유지보수성을 높이는 기법.', color: 'from-yellow-500 to-orange-400' },
+                    { id: 10, date: '2026. 02. 16', tag: 'Backend', title: '풀스택 개발 트렌드 2026', desc: '서버리스와 엣지 컴퓨팅의 혁신.', color: 'from-emerald-500 to-teal-500' }
+                ];
+                document.write(blogPosts.map((p, i) => `
+                    <article class="blog-card group relative scroll-reveal" style="transition-delay: ${i * 0.05}s" data-category="${p.tag}">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                        <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:-translate-y-2 transition-all duration-300 flex flex-col">
+                            <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">${p.date} · ${p.tag}</div>
+                            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 group-hover:text-blue-600 transition-colors">${p.title}</h2>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">${p.desc}</p>
+                            <a href="posts/post${p.id}.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </article>
+                `).join(''));
+            </script>
         </div>
     </main>
 
