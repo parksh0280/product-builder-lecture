@@ -1,41 +1,92 @@
+:root {
+    --bg-color: #f8f9fa;
+    --container-bg: #ffffff;
+    --text-color: #212529;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --btn-bg: #4CAF50;
+    --btn-hover: #45a049;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #f8f9fa;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --btn-bg: #66bb6a;
+    --btn-hover: #81c784;
+}
 
 body {
-    font-family: sans-serif;
+    font-family: 'Pretendard', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
     text-align: center;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 3rem;
+    background-color: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 90%;
+    max-width: 450px;
 }
 
-button {
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+h1 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+button#generate-btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: var(--btn-bg);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 10px rgba(76, 175, 80, 0.4);
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #45a049;
-    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.6);
+button#generate-btn:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
 }
 
 lotto-numbers {
     display: block;
-    margin-top: 1.5rem;
+    min-height: 60px;
+    margin: 2rem 0;
+}
+
+.hidden {
+    display: none;
 }

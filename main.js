@@ -1,4 +1,3 @@
-
 class LottoNumbers extends HTMLElement {
     constructor() {
         super();
@@ -8,19 +7,21 @@ class LottoNumbers extends HTMLElement {
             .numbers {
                 display: flex;
                 justify-content: center;
-                gap: 10px;
+                gap: 8px;
+                flex-wrap: wrap;
             }
             .number {
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
                 border-radius: 50%;
-                background-color: #f0f0f0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 1.5rem;
-                font-weight: bold;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: #212529;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                border: 2px solid #fff;
             }
         `;
         const numbersContainer = document.createElement('div');
@@ -42,19 +43,22 @@ class LottoNumbers extends HTMLElement {
     }
 
     getBackgroundColor(number) {
-        if (number <= 10) return '#f9e79f';
-        if (number <= 20) return '#a9dfbf';
-        if (number <= 30) return '#aed6f1';
-        if (number <= 40) return '#f5b7b1';
-        return '#d2b4de';
+        if (number <= 10) return '#fce38a'; // Yellow
+        if (number <= 20) return '#95e1d3'; // Green
+        if (number <= 30) return '#aeddef'; // Blue
+        if (number <= 40) return '#f38181'; // Red
+        return '#b8de6f'; // Purple-ish
     }
 }
 
 customElements.define('lotto-numbers', LottoNumbers);
 
 const generateBtn = document.getElementById('generate-btn');
+const themeToggle = document.getElementById('theme-toggle');
 const lottoNumbers = document.querySelector('lotto-numbers');
+const lottoPlaceholder = document.getElementById('lotto-placeholder');
 
+// Lotto Logic
 function generateLottoNumbers() {
     const numbers = new Set();
     while (numbers.size < 6) {
@@ -67,9 +71,26 @@ function generateLottoNumbers() {
 function updateLottoNumbers() {
     const newNumbers = generateLottoNumbers();
     lottoNumbers.setNumbers(newNumbers);
+    
+    // Show numbers, hide placeholder
+    lottoNumbers.classList.remove('hidden');
+    lottoPlaceholder.classList.add('hidden');
 }
 
 generateBtn.addEventListener('click', updateLottoNumbers);
 
-// Initial generation
-updateLottoNumbers();
+// Theme Toggle Logic
+let currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+updateThemeButton();
+
+themeToggle.addEventListener('click', () => {
+    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('theme', currentTheme);
+    updateThemeButton();
+});
+
+function updateThemeButton() {
+    themeToggle.textContent = currentTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+}
