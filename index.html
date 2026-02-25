@@ -30,16 +30,25 @@
                 <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
                     <li><a href="index.html" class="text-blue-600 font-semibold">Home</a></li>
-                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Blog</a></li>
-                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">About</a></li>
-                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Contact</a></li>
+                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
                 <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
                     <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
                 </button>
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300"><i data-lucide="menu"></i></button>
             </nav>
-            <div id="mobile-menu" class="hidden md:hidden pb-6"><ul class="flex flex-col gap-4"><li><a href="index.html" class="block text-blue-600 font-semibold">Home</a></li><li><a href="blog.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Blog</a></li><li><a href="about.html" class="block text-slate-600 dark:text-slate-300 font-semibold">About</a></li><li><a href="contact.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Contact</a></li></ul></div>
+            <div id="mobile-menu" class="hidden md:hidden pb-6">
+                <ul class="flex flex-col gap-4">
+                    <li><a href="index.html" class="block text-blue-600 font-semibold">Home</a></li>
+                    <li><a href="blog.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Blog</a></li>
+                    <li><a href="about.html" class="block text-slate-600 dark:text-slate-300 font-semibold">About</a></li>
+                    <li><a href="contact.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Contact</a></li>
+                    <li><a href="privacy.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Privacy</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -70,7 +79,6 @@
                 <p class="text-lg text-slate-600 dark:text-slate-400">개발 생산성 향상을 위한 전문 기술 아티클</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Blog Cards loop -->
                 <script>
                     const posts = [
                         { id: 1, date: '2026. 02. 25', time: '8 min', tag: 'Productivity', title: '2026년 VS Code 최적의 확장 프로그램 10선', desc: '단순한 에디터를 넘어 강력한 생산성 도구로 진화한 VS Code를 200% 활용하기 위한 필수 확장 프로그램.', color: 'from-blue-500 to-cyan-500' },

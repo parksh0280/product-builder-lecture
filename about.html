@@ -17,10 +17,11 @@
             <nav class="flex items-center justify-between h-20">
                 <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
-                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Home</a></li>
-                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Blog</a></li>
+                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
                     <li><a href="about.html" class="text-blue-600 font-semibold">About</a></li>
-                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Contact</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
                 <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                     <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
@@ -28,17 +29,25 @@
             </nav>
         </div>
     </header>
-    <main class="py-20 max-w-4xl mx-auto px-6">
-        <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-8">소개 (About Us)</h1>
-        <div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 text-lg leading-relaxed space-y-6">
-            <p>ModernDevKit은 빠르게 변화하는 기술 생태계 속에서 개발자들이 본질에 집중할 수 있도록 돕기 위해 탄생했습니다.</p>
-            <p>우리는 단순히 최신 기술을 소개하는 것을 넘어, **'어떻게 하면 더 효율적으로 일할 수 있는가?'**라는 질문에 대한 답을 찾아가는 과정을 공유합니다.</p>
-            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-4">우리의 핵심 가치</h2>
-            <ul class="list-disc pl-6 space-y-4">
-                <li><strong>독창적 경험:</strong> 실제 사용해본 도구와 워크플로우만을 바탕으로 깊이 있는 리뷰를 작성합니다.</li>
-                <li><strong>지속 가능한 개발:</strong> 신체 건강과 정신적인 집중력을 유지하며 개발하는 방법을 연구합니다.</li>
-                <li><strong>도구의 미학:</strong> 도구는 단순한 수단이 아니라, 우리의 사고를 확장해주는 파트너라고 믿습니다.</li>
-            </ul>
+    <main class="py-24 max-w-4xl mx-auto px-6">
+        <div class="space-y-12">
+            <div class="text-center">
+                <h1 class="text-6xl font-black text-slate-900 dark:text-white mb-6">About Us</h1>
+                <p class="text-2xl text-slate-600 dark:text-slate-400">최고의 효율을 지향하는 개발자들을 위한 가이드</p>
+            </div>
+            <div class="prose prose-slate dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 text-lg leading-relaxed space-y-8">
+                <p>ModernDevKit은 빠르게 변화하는 기술 생태계 속에서 개발자들이 본질에 집중할 수 있도록 돕기 위해 탄생했습니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our Vision</h2>
+                        <p>단순한 도구 소개를 넘어, 지속 가능한 개발 문화를 연구하고 공유합니다.</p>
+                    </div>
+                    <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Our Value</h2>
+                        <p>실제 경험을 바탕으로 한 검증된 워크플로우만을 제안합니다.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-16 text-center text-slate-600 dark:text-slate-400">

@@ -1,121 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F2RZ3S4QH0');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | ModernDevKit</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              slate: { 950: '#030213' }
-            }
-          }
-        }
-      }
-    </script>
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
-    <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                    ModernDevKit
-                </a>
-
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
-                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Home</a></li>
-                    <li><a href="blog.html" class="text-blue-600 dark:text-blue-400 font-semibold transition-colors">Blog</a></li>
-                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">About</a></li>
-                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Contact</a></li>
-                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Privacy</a></li>
+                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="blog.html" class="text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-
-                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all">
-                    <i data-lucide="moon" class="w-4 h-4"></i>
-                    <span class="font-semibold text-sm">Dark</span>
-                </button>
-
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300">
-                    <i data-lucide="menu"></i>
+                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
                 </button>
             </nav>
-
-            <div id="mobile-menu" class="hidden md:hidden pb-6 animate-in">
-                <ul class="flex flex-col gap-4">
-                    <li><a href="index.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Home</a></li>
-                    <li><a href="blog.html" class="block text-blue-600 font-semibold">Blog</a></li>
-                    <li><a href="about.html" class="block text-slate-600 dark:text-slate-300 font-semibold">About</a></li>
-                    <li><a href="contact.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Contact</a></li>
-                    <li><a href="privacy.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Privacy</a></li>
-                </ul>
-            </div>
         </div>
     </header>
-
-    <main class="py-20">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16 scroll-reveal">
-                <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">Blog & Insights</h1>
-                <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">개발 생산성, 최신 기술 트렌드, 그리고 성장에 대한 깊이 있는 기록들</p>
-            </div>
-
-            <div class="space-y-8">
-                <!-- Blog Item 1 -->
-                <article class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all scroll-reveal">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 25</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 hover:text-blue-600 transition-colors">
-                        <a href="posts/post1.html">2026년 VS Code 최적의 확장 프로그램 10선</a>
-                    </h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">단순한 에디터를 넘어 강력한 생산성 도구로 진화한 VS Code를 200% 활용하기 위한 필수 도구 분석.</p>
-                    <a href="posts/post1.html" class="text-blue-600 dark:text-blue-400 font-bold flex items-center gap-2 group">
-                        전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </article>
-
-                <!-- Blog Item 2 -->
-                <article class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all scroll-reveal">
-                    <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">2026. 02. 24</div>
-                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 hover:text-blue-600 transition-colors">
-                        <a href="posts/post2.html">디지털 미니멀리즘과 딥 워크 전략</a>
-                    </h2>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6">집중력을 분산시키는 요소를 제거하고 본질적인 문제 해결에 몰입하기 위한 실행 지침.</p>
-                    <a href="posts/post2.html" class="text-blue-600 dark:text-blue-400 font-bold flex items-center gap-2 group">
-                        전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </article>
-
-                <!-- More items can be added here... -->
-            </div>
+    <main class="py-20 max-w-5xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">Blog & Insights</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400">개발 생산성과 최신 기술 트렌드를 깊이 있게 다룹니다.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <script>
+                const posts = [
+                    { id: 1, date: '2026. 02. 25', tag: 'Productivity', title: '2026년 VS Code 최적의 확장 프로그램 10선', desc: 'IDE를 뛰어넘는 생산성을 위한 필수 도구들을 소개합니다.' },
+                    { id: 2, date: '2026. 02. 24', tag: 'Mindset', title: '디지털 미니멀리즘: 딥 워크 전략', desc: '집중력을 방해하는 요소를 제거하고 몰입하는 방법.' },
+                    { id: 3, date: '2026. 02. 23', tag: 'CLI', title: '터미널 환경 구축 가이드', desc: 'Zsh와 Starship으로 아름답고 강력한 터미널을 만드세요.' }
+                ];
+                document.write(posts.map(p => `
+                    <article class="p-8 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-blue-500/10 transition-all">
+                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">${p.date} · ${p.tag}</div>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4"><a href="posts/post${p.id}.html">${p.title}</a></h2>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">${p.desc}</p>
+                        <a href="posts/post${p.id}.html" class="text-blue-600 font-bold flex items-center gap-2">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    </article>
+                `).join(''));
+            </script>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 py-16">
-            <div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-600 dark:text-slate-400">
-                &copy; 2026 ModernDevKit. All rights reserved.
-            </div>
-        </div>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-16 text-center text-slate-600 dark:text-slate-400">
+        &copy; 2026 ModernDevKit. All rights reserved.
     </footer>
-
     <script src="js/main.js"></script>
 </body>
 </html>
