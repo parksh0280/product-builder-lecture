@@ -1,79 +1,105 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F2RZ3S4QH0');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>디지털 미니멀리즘과 딥 워크 전략 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-4286055195982585">
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="../index.html" class="logo">ModernDevKit</a>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../privacy.html">Privacy</a></li>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-switch">🌙 Dark</button>
+                <button class="theme-toggle hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                </button>
             </nav>
         </div>
     </header>
-    <main class="container page-content">
-        <div class="post-header">
-            <span class="tag">Mindset</span>
-            <h1>디지털 미니멀리즘: 불필요한 알림으로부터 해방되는 딥 워크 전략</h1>
-            <div class="post-meta">작성일: 2026년 2월 24일 · 작성자: ModernDevKit Editorial Team</div>
-        </div>
-        
-        <p class="lead">현대 개발자에게 '시간'보다 귀한 것은 '주의력(Attention)'입니다. 하지만 우리가 사용하는 수많은 도구는 우리의 주의력을 헐값에 팔아넘기도록 설계되어 있습니다. 인지적 과부하 상태에서 벗어나 본질적인 문제 해결에 집중하기 위한 디지털 미니멀리즘 실천 가이드를 제안합니다.</p>
 
-        <h2>1. 푸시 알림과의 전쟁: 기본 설정을 '무음'으로</h2>
-        <p>인간의 뇌는 알림이 울린 후 다시 원래의 집중 상태로 돌아가는 데 평균 23분이 걸린다고 합니다. 슬랙, 이메일, 카카오톡, 링크드인 등 모든 서비스의 푸시 알림을 끄세요. 메시지는 상대방이 보내고 싶을 때 보는 것이 아니라, 내가 확인하고 싶은 시간에 확인하는 '풀(Pull)' 방식의 커뮤니케이션으로 전환해야 합니다.</p>
-        
-        <h2>2. 탭 다이어트: 인지적 부하의 제거</h2>
-        <p>브라우저 상단에 수십 개의 탭이 열려 있는 것은 정리되지 않은 책상과 같습니다. 한 번에 하나의 작업(Single-tasking)에만 집중하세요. 지금 당장 필요하지 않은 탭은 과감히 닫거나 'OneTab' 같은 확장 프로그램을 사용하여 리스트로 보관하세요. 눈앞의 시각적 자극을 최소화하는 것만으로도 작업 효율이 비약적으로 향상됩니다.</p>
-        
-        <h2>3. 딥 워크(Deep Work) 시간대의 사수</h2>
-        <p>매일 오전 또는 본인의 집중력이 가장 높은 3시간을 '딥 워크' 시간으로 지정하세요. 이 시간 동안에는 모든 메신저를 끄고, 전화는 방해 금지 모드로 전환하며, 오직 해결해야 할 난제에만 몰입합니다. 하루 3시간의 밀도 높은 작업이 8시간의 산만한 작업보다 훨씬 큰 성과를 가져옵니다.</p>
-        
-        <h2>4. 소셜 미디어와 무한 스크롤의 굴레</h2>
-        <p>우리는 휴식이라는 핑계로 인스타그램이나 유튜브 쇼츠를 봅니다. 하지만 이는 도파민 시스템을 자극하여 뇌를 더욱 지치게 만듭니다. 진정한 휴식은 기기를 멀리하고 산책을 하거나, 눈을 감고 명상을 하거나, 종이책을 읽는 것입니다. 업무 외 시간에 기술로부터 완전히 분리되는 '디지털 디톡스'가 필요합니다.</p>
-        
-        <h2>5. 아날로그 기록의 가치</h2>
-        <p>복잡한 아키텍처를 설계하거나 로직을 구상할 때 가끔은 키보드에서 손을 떼고 종이와 펜을 잡으세요. 펜으로 직접 그림을 그리고 글을 쓰는 과정은 뇌의 전두엽을 활성화하여 창의적인 문제 해결을 돕습니다. 디지털 도구가 줄 수 없는 직관적인 사고의 공간을 확보하세요.</p>
+    <main class="py-20 max-w-3xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <header class="mb-12">
+                <div class="flex items-center gap-2 text-blue-600 font-bold text-sm mb-4 uppercase tracking-wider">
+                    <i data-lucide="tag" class="w-4 h-4"></i> Mindset
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">디지털 미니멀리즘: 불필요한 알림으로부터 해방되는 딥 워크 전략</h1>
+                <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 24</div>
+                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Admin</div>
+                </div>
+            </header>
 
-        <div class="post-conclusion">
-            <h2>중요한 것은 도구가 아니라 당신의 의지입니다</h2>
-            <p>기술은 삶을 편리하게 만들지만, 우리의 정신을 지배하게 해서는 안 됩니다. 의도적으로 기술의 사용을 제한하고, 비워진 공간을 깊은 사고와 성찰로 채우세요. 그것이 AI 시대에 인간 개발자가 가질 수 있는 가장 강력한 무기입니다.</p>
-        </div>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8">
+                <p class="text-xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">현대 개발자에게 '시간'보다 귀한 것은 '주의력(Attention)'입니다. 하지만 우리가 사용하는 수많은 도구는 우리의 주의력을 헐값에 팔아넘기도록 설계되어 있습니다. 인지적 과부하 상태에서 벗어나 본질적인 문제 해결에 집중하기 위한 디지털 미니멀리즘 실천 가이드를 제안합니다.</p>
 
-        <a href="../index.html" class="back-link">&larr; 목록으로 돌아가기</a>
+                <h2 class="text-2xl font-bold mt-12 mb-6">1. 푸시 알림과의 전쟁: 기본 설정을 '무음'으로</h2>
+                <p>인간의 뇌는 알림이 울린 후 다시 원래의 집중 상태로 돌아가는 데 평균 23분이 걸린다고 합니다. 슬랙, 이메일, 카카오톡, 링크드인 등 모든 서비스의 푸시 알림을 끄세요. 메시지는 상대방이 보내고 싶을 때 보는 것이 아니라, 내가 확인하고 싶은 시간에 확인하는 '풀(Pull)' 방식의 커뮤니케이션으로 전환해야 합니다.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">2. 탭 다이어트: 인지적 부하의 제거</h2>
+                <p>브라우저 상단에 수십 개의 탭이 열려 있는 것은 정리되지 않은 책상과 같습니다. 한 번에 하나의 작업(Single-tasking)에만 집중하세요. 지금 당장 필요하지 않은 탭은 과감히 닫거나 'OneTab' 같은 확장 프로그램을 사용하여 리스트로 보관하세요.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">3. 딥 워크(Deep Work) 시간대의 사수</h2>
+                <p>매일 오전 또는 본인의 집중력이 가장 높은 3시간을 '딥 워크' 시간으로 지정하세요. 이 시간 동안에는 모든 메신저를 끄고, 전화는 방해 금지 모드로 전환하며, 오직 해결해야 할 난제에만 몰입합니다. 하루 3시간의 밀도 높은 작업이 8시간의 산만한 작업보다 훨씬 큰 성과를 가져옵니다.</p>
+
+                <div class="mt-16 p-8 bg-indigo-50 dark:bg-indigo-900/20 rounded-3xl border border-indigo-100 dark:border-indigo-800">
+                    <h3 class="text-xl font-bold text-indigo-900 dark:text-indigo-100 mb-4">결론</h3>
+                    <p class="text-indigo-800 dark:text-indigo-200">중요한 것은 도구가 아니라 당신의 의지입니다. 의도적으로 기술의 사용을 제한하고, 비워진 공간을 깊은 사고와 성찰로 채우세요. 그것이 AI 시대에 인간 개발자가 가질 수 있는 가장 강력한 무기입니다.</p>
+                </div>
+            </div>
+
+            <footer class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../blog.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기
+                </a>
+            </footer>
+        </article>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="../about.html">소개</a>
-                <a href="../blog.html">블로그</a>
-                <a href="../contact.html">문의</a>
-                <a href="../privacy.html">개인정보처리방침</a>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-left">
+                <div class="md:col-span-2">
+                    <a href="../index.html" class="text-3xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 block">ModernDevKit</a>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-md">
+                        현대적인 개발 생태계에서 생산성을 극대화하기 위한 도구 선별, 워크플로우 최적화, 그리고 지속 가능한 개발 문화에 대한 심층 가이드를 제공합니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">빠른 링크</h4>
+                    <ul class="space-y-4">
+                        <li><a href="../about.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">소개</a></li>
+                        <li><a href="../blog.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">블로그</a></li>
+                        <li><a href="../contact.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">문의</a></li>
+                        <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">리소스</h4>
+                    <ul class="space-y-4">
+                        <li><a href="../tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="../guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
+                        <li><a href="../tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
+                        <li><a href="../faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
             </div>
-            <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+            <div class="pt-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-500 text-sm">
+                <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+            </div>
         </div>
     </footer>
     <script src="../js/main.js"></script>

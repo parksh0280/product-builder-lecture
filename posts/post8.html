@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F2RZ3S4QH0');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git 마스터 가이드 | ModernDevKit</title>
+    <title>고급 Git 마스터 가이드 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-4286055195982585">
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="../index.html" class="logo">ModernDevKit</a>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../privacy.html">Privacy</a></li>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-switch">🌙 Dark</button>
+                <button class="theme-toggle hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                </button>
             </nav>
         </div>
     </header>
-    <main class="container page-content">
-        <div class="post-header">
-            <span class="tag">Workflow</span>
-            <h1>Git 마스터: Rebase와 Cherry-pick으로 완성하는 깔끔한 커밋 히스토리</h1>
-            <div class="post-meta">작성일: 2026년 2월 18일 · 작성자: ModernDevKit Editorial Team</div>
-        </div>
-        
-        <p class="lead">Git은 단순한 버전 관리 도구가 아닙니다. 동료 개발자와 소통하는 기록 장치입니다. 지저분한 Merge 커밋 대신, 의미 있고 깔끔한 히스토리를 만들기 위한 고급 기법들을 심층 분석합니다.</p>
 
-        <h2>1. Rebase: 깔끔한 일직선 히스토리</h2>
-        <p>Merge가 두 브랜치를 합치는 '결과'에 집중한다면, Rebase는 브랜치의 '기점'을 옮기는 '과정'에 집중합니다. Rebase를 적절히 활용하면 불필요한 Merge 커밋을 없애고 프로젝트의 흐름을 한눈에 파악할 수 있는 일직선 히스토리를 유지할 수 있습니다.</p>
-        
-        <h2>2. Interactive Rebase: 커밋 메시지의 예술</h2>
-        <p>`git rebase -i` 명령어를 통해 이미 작성한 커밋들을 하나로 합치거나(Squash), 이름을 바꾸고(Reword), 순서를 변경할 수 있습니다. 지저분한 작업 로그를 깔끔한 기능 단위 커밋으로 정제하여 리뷰어의 부담을 줄여주세요.</p>
-        
-        <h2>3. Cherry-pick: 필요한 것만 골라 담기</h2>
-        <p>다른 브랜치에 있는 특정 커밋 하나만 현재 브랜치로 가져오고 싶을 때 Cherry-pick은 매우 유용합니다. 긴급한 핫픽스나 특정 기능의 부분적 이식에 필수적인 도구입니다.</p>
-        
-        <h2>4. Git Bisect: 버그의 근원을 찾아서</h2>
-        <p>언제부터 버그가 발생했는지 모를 때, 이진 탐색 기법을 사용하는 `git bisect`는 구세주와 같습니다. 수백 개의 커밋 중 문제가 발생한 지점을 단 몇 단계 만에 찾아낼 수 있습니다.</p>
-        
-        <div class="post-conclusion">
-            <h2>히스토리는 소통입니다</h2>
-            <p>미래의 나, 혹은 동료 개발자가 당신의 커밋 로그만 보고도 변경 의도를 완벽히 이해할 수 있다면 당신은 진정한 Git 마스터입니다.</p>
-        </div>
-        <a href="../blog.html" class="back-link">&larr; 블로그 목록으로 돌아가기</a>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="../about.html">소개</a>
-                <a href="../blog.html">블로그</a>
-                <a href="../contact.html">문의</a>
-                <a href="../privacy.html">개인정보처리방침</a>
+    <main class="py-20 max-w-3xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <header class="mb-12">
+                <div class="flex items-center gap-2 text-blue-600 font-bold text-sm mb-4 uppercase tracking-wider">
+                    <i data-lucide="tag" class="w-4 h-4"></i> Workflow
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Git 마스터: Rebase와 Cherry-pick으로 완성하는 깔끔한 커밋 히스토리</h1>
+                <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 18</div>
+                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Admin</div>
+                </div>
+            </header>
+
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8">
+                <p class="text-xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">커밋 메시지가 'fixed bug', 'update'로 가득 차 있지는 않나요? Git 히스토리는 프로젝트의 족보와 같습니다. 동료 개발자들이 이해하기 쉽고, 추적이 용이한 깔끔한 히스토리를 만드는 고급 기술들을 알아봅니다.</p>
+
+                <h2 class="text-2xl font-bold mt-12 mb-6">1. Interactive Rebase (`git rebase -i`)</h2>
+                <p>커밋을 합치고(squash), 이름을 바꾸고(reword), 순서를 바꾸는 마법 같은 도구입니다. 원격 저장소에 푸시하기 전, 지저분한 작업 로그를 단 하나의 의미 있는 커밋으로 정리하세요.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">2. Cherry-pick: 필요한 것만 골라담기</h2>
+                <p>다른 브랜치의 특정 기능이나 버그 수정 내용만 현재 브랜치로 가져오고 싶을 때 사용합니다. 불필요한 머지 없이 코드의 정수만을 추출할 수 있습니다.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">3. Reflog: Git의 타임머신</h2>
+                <p>실수로 중요한 커밋을 삭제하거나 리베이스 도중 코드가 꼬였다면? `git reflog`는 당신이 수행한 모든 작업의 이력을 보여줍니다. '삭제된 커밋'도 복구할 수 있는 최후의 수단입니다.</p>
+
+                <div class="mt-16 p-8 bg-red-50 dark:bg-red-900/20 rounded-3xl border border-red-100 dark:border-red-800">
+                    <h3 class="text-xl font-bold text-red-900 dark:text-red-100 mb-4">협업의 기본은 커뮤니케이션입니다</h3>
+                    <p class="text-red-800 dark:text-red-200">깔끔한 Git 히스토리는 문서 작성만큼이나 중요한 커뮤니케이션 도구입니다. 미래의 당신과 동료들을 위해 오늘부터 커밋 하나에도 정성을 들여보세요.</p>
+                </div>
             </div>
-            <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+
+            <footer class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../blog.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기
+                </a>
+            </footer>
+        </article>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-left">
+                <div class="md:col-span-2">
+                    <a href="../index.html" class="text-3xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 block">ModernDevKit</a>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-md">
+                        현대적인 개발 생태계에서 생산성을 극대화하기 위한 도구 선별, 워크플로우 최적화, 그리고 지속 가능한 개발 문화에 대한 심층 가이드를 제공합니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">빠른 링크</h4>
+                    <ul class="space-y-4">
+                        <li><a href="../about.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">소개</a></li>
+                        <li><a href="../blog.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">블로그</a></li>
+                        <li><a href="../contact.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">문의</a></li>
+                        <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">리소스</h4>
+                    <ul class="space-y-4">
+                        <li><a href="../tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="../guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
+                        <li><a href="../tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
+                        <li><a href="../faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-500 text-sm">
+                <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

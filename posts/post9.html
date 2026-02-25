@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F2RZ3S4QH0');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>현대 자바스크립트 Clean Code | ModernDevKit</title>
+    <title>자바스크립트 Clean Code | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-4286055195982585">
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="../index.html" class="logo">ModernDevKit</a>
-                <ul class="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                    <li><a href="../privacy.html">Privacy</a></li>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-switch">🌙 Dark</button>
+                <button class="theme-toggle hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                </button>
             </nav>
         </div>
     </header>
-    <main class="container page-content">
-        <div class="post-header">
-            <span class="tag">Code Quality</span>
-            <h1>현대 자바스크립트를 위한 Clean Code 원칙: 읽기 쉬운 코드가 좋은 코드다</h1>
-            <div class="post-meta">작성일: 2026년 2월 17일 · 작성자: ModernDevKit Editorial Team</div>
-        </div>
-        
-        <p class="lead">코드는 기계가 읽기 위해서가 아니라 사람이 읽기 위해 작성됩니다. 자바스크립트의 유연함은 양날의 검입니다. 이 유연함을 제어하고 지속 가능한 코드를 작성하기 위한 핵심 클린 코드 원칙을 소개합니다.</p>
 
-        <h2>1. 의도가 드러나는 명확한 이름 짓기</h2>
-        <p>변수명과 함수명에서 데이터의 성격과 행위가 명확히 드러나야 합니다. `d` 대신 `daysSinceCreation`을, `process()` 대신 `calculateMonthlyRevenue()`를 사용하세요. 이름만 보고도 코드를 유추할 수 있어야 합니다.</p>
-        
-        <h2>2. 함수의 단일 책임 원칙 (SRP)</h2>
-        <p>하나의 함수는 오직 한 가지 일만 수행해야 합니다. 함수가 너무 길어지거나 여러 개의 'if' 문으로 복잡하다면, 더 작은 단위로 쪼개야 할 신호입니다. 이는 테스트를 쉽게 만들고 재사용성을 높여줍니다.</p>
-        
-        <h2>3. 부수 효과(Side Effects)의 최소화</h2>
-        <p>함수 외부의 상태를 변경하는 행위는 버그의 온상입니다. 가능한 한 순수 함수(Pure Function)를 지향하고, 불변성(Immutability)을 유지하여 예측 가능한 코드를 작성하세요.</p>
-        
-        <h2>4. 조기 반환 (Early Return) 패턴</h2>
-        <p>복잡한 중첩 'if' 문 대신 조건이 맞지 않으면 즉시 반환하는 패턴을 사용하세요. 이는 코드의 깊이를 줄여주고 가독성을 비약적으로 향상시킵니다.</p>
-        
-        <div class="post-conclusion">
-            <h2>리팩토링은 습관입니다</h2>
-            <p>처음부터 완벽한 코드를 짤 수는 없습니다. 하지만 지속적인 리팩토링을 통해 코드의 품질을 높여가는 과정이 진정한 전문가로 가는 길입니다.</p>
-        </div>
-        <a href="../blog.html" class="back-link">&larr; 블로그 목록으로 돌아가기</a>
-    </main>
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="../about.html">소개</a>
-                <a href="../blog.html">블로그</a>
-                <a href="../contact.html">문의</a>
-                <a href="../privacy.html">개인정보처리방침</a>
+    <main class="py-20 max-w-3xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <header class="mb-12">
+                <div class="flex items-center gap-2 text-blue-600 font-bold text-sm mb-4 uppercase tracking-wider">
+                    <i data-lucide="tag" class="w-4 h-4"></i> Code Quality
+                </div>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">현대 자바스크립트를 위한 Clean Code 원칙: 읽기 쉬운 코드가 좋은 코드다</h1>
+                <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
+                    <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 17</div>
+                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Admin</div>
+                </div>
+            </header>
+
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8">
+                <p class="text-xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">코드는 기계가 실행하기 위해서만 존재하는 것이 아니라, 사람이 읽고 이해하기 위해 존재합니다. 유지보수가 쉽고 확장에 유연한 자바스크립트 코드를 작성하기 위한 핵심 원칙들을 소개합니다.</p>
+
+                <h2 class="text-2xl font-bold mt-12 mb-6">1. 의미 있는 변수명과 함수명</h2>
+                <p>변수 이름에 데이터 타입을 넣거나(userListArray), 모호한 약어(data1)를 사용하는 것을 피하세요. 이름만 봐도 이 변수가 어떤 역할을 하는지 알 수 있어야 합니다.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">2. 함수의 단일 책임 원칙 (SRP)</h2>
+                <p>하나의 함수는 오직 한 가지 일만 수행해야 합니다. 함수가 길어지고 'and'라는 단어로 설명된다면, 더 작은 함수로 쪼개야 할 신호입니다.</p>
+                
+                <h2 class="text-2xl font-bold mt-12 mb-6">3. 매개변수 최소화와 객체 활용</h2>
+                <p>함수의 매개변수가 3개 이상이라면 객체로 전달하는 것을 고려하세요. 순서에 의존하지 않고 각 인자의 의미를 명확히 알 수 있습니다.</p>
+
+                <div class="mt-16 p-8 bg-yellow-50 dark:bg-yellow-900/20 rounded-3xl border border-yellow-100 dark:border-yellow-800">
+                    <h3 class="text-xl font-bold text-yellow-900 dark:text-yellow-100 mb-4">Clean Code는 배려입니다</h3>
+                    <p class="text-yellow-800 dark:text-yellow-200">오늘 작성한 코드를 6개월 뒤의 당신이 다시 읽는다고 상상해 보세요. 미래의 당신이 고마워할 수 있도록 코드를 정돈하세요.</p>
+                </div>
             </div>
-            <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+
+            <footer class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../blog.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기
+                </a>
+            </footer>
+        </article>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-left">
+                <div class="md:col-span-2">
+                    <a href="../index.html" class="text-3xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 block">ModernDevKit</a>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-md">
+                        현대적인 개발 생태계에서 생산성을 극대화하기 위한 도구 선별, 워크플로우 최적화, 그리고 지속 가능한 개발 문화에 대한 심층 가이드를 제공합니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">빠른 링크</h4>
+                    <ul class="space-y-4">
+                        <li><a href="../about.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">소개</a></li>
+                        <li><a href="../blog.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">블로그</a></li>
+                        <li><a href="../contact.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">문의</a></li>
+                        <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">리소스</h4>
+                    <ul class="space-y-4">
+                        <li><a href="../tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="../guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
+                        <li><a href="../tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
+                        <li><a href="../faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-500 text-sm">
+                <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 </html>

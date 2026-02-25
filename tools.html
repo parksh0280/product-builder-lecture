@@ -21,7 +21,7 @@
                     <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
                     <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
                 </ul>
-                <button id="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
+                <button class="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
             </nav>
         </div>
     </header>
@@ -31,40 +31,73 @@
             <p class="text-xl text-slate-600 dark:text-slate-400">생산성을 200% 높여주는 엄선된 개발 도구 리스트</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all shadow-lg text-center">
+            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all shadow-lg text-center scroll-reveal">
                 <i data-lucide="layers" class="w-10 h-10 mx-auto text-blue-600 mb-6"></i>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Productivity</h2>
                 <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8">
-                    <li>Raycast - macOS 런처</li>
-                    <li>Obsidian - 지식 관리</li>
-                    <li>Cron - 캘린더</li>
+                    <li><strong>Raycast</strong> - 차세대 macOS 런처</li>
+                    <li><strong>Obsidian</strong> - 연결 기반 지식 관리</li>
+                    <li><strong>Cron</strong> - 개발자 친화적 캘린더</li>
+                    <li><strong>Arc Browser</strong> - 몰입형 브라우징 경험</li>
                 </ul>
                 <a href="#" class="font-bold text-blue-600">컬렉션 보기</a>
             </div>
-            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all shadow-lg text-center">
+            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 transition-all shadow-lg text-center scroll-reveal">
                 <i data-lucide="code" class="w-10 h-10 mx-auto text-indigo-600 mb-6"></i>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Development</h2>
                 <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8">
-                    <li>VS Code - 에디터</li>
-                    <li>Warp - 현대적 터미널</li>
-                    <li>Postman - API 테스트</li>
+                    <li><strong>VS Code</strong> - 업계 표준 에디터</li>
+                    <li><strong>Warp</strong> - AI 기반 현대적 터미널</li>
+                    <li><strong>Postman</strong> - API 테스트 필수 도구</li>
+                    <li><strong>Docker</strong> - 일관된 개발 환경 구축</li>
                 </ul>
                 <a href="#" class="font-bold text-indigo-600">컬렉션 보기</a>
             </div>
-            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all shadow-lg text-center">
+            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-purple-500 transition-all shadow-lg text-center scroll-reveal">
                 <i data-lucide="cpu" class="w-10 h-10 mx-auto text-purple-600 mb-6"></i>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Hardware</h2>
                 <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8">
-                    <li>HHKB - 키보드</li>
-                    <li>MX Master 3 - 마우스</li>
-                    <li>Dell UltraSharp - 모니터</li>
+                    <li><strong>HHKB</strong> - 개발자의 종착역 키보드</li>
+                    <li><strong>MX Master 3S</strong> - 인체공학 마우스</li>
+                    <li><strong>Dell UltraSharp</strong> - 색정확도 높은 모니터</li>
+                    <li><strong>CalDigit TS4</strong> - 원케이블 도킹 스테이션</li>
                 </ul>
                 <a href="#" class="font-bold text-purple-600">컬렉션 보기</a>
             </div>
         </div>
     </main>
-    <footer class="py-16 text-center text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
-        &copy; 2026 ModernDevKit. All rights reserved.
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="text-3xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 block">ModernDevKit</a>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-md">
+                        현대적인 개발 생태계에서 생산성을 극대화하기 위한 도구 선별, 워크플로우 최적화, 그리고 지속 가능한 개발 문화에 대한 심층 가이드를 제공합니다.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">빠른 링크</h4>
+                    <ul class="space-y-4">
+                        <li><a href="about.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">소개</a></li>
+                        <li><a href="blog.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">블로그</a></li>
+                        <li><a href="contact.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">문의</a></li>
+                        <li><a href="privacy.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">리소스</h4>
+                    <ul class="space-y-4">
+                        <li><a href="tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
+                        <li><a href="tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
+                        <li><a href="faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-500 text-sm">
+                <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
     <script src="js/main.js"></script>
 </body>
