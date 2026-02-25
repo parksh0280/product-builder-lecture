@@ -237,6 +237,114 @@ footer {
 
 .footer-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; }
 
+/* Improved Contact Form */
+.contact-form {
+    background: var(--bg-card);
+    padding: 3.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-align: left;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+/* Blog Page Specific */
+.blog-header {
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto 6rem;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.blog-item:last-child { border-bottom: none; }
+
+.blog-item .date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.blog-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+}
+
+.blog-item h2 a { text-decoration: none; color: inherit; }
+.blog-item h2 a:hover { color: var(--primary); }
+
+.blog-item p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
