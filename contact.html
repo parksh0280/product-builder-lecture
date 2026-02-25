@@ -1,72 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-F2RZ3S4QH0');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>문의하기 | ModernDevKit</title>
+    <title>문의 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-4286055195982585">
+    <script>tailwind.config={darkMode:'class'}</script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">ModernDevKit</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Home</a></li>
+                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">Blog</a></li>
+                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold">About</a></li>
+                    <li><a href="contact.html" class="text-blue-600 font-semibold">Contact</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-switch">🌙 Dark</button>
+                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                </button>
             </nav>
         </div>
     </header>
-
-    <main class="container page-content" style="text-align: center;">
-        <div class="post-header">
-            <h1>제휴 및 문의</h1>
-            <p class="lead">협업 제안이나 사이트 이용 관련 문의가 있으시면 아래 양식을 작성해 주세요.</p>
-        </div>
-        
-        <form action="https://formspree.io/f/xkovkpab" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">성함 / 기업명</label>
-                <input type="text" id="name" name="name" placeholder="문의하시는 분의 성함을 입력하세요" required>
+    <main class="py-20 max-w-2xl mx-auto px-6">
+        <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-8 text-center">Contact Us</h1>
+        <p class="text-xl text-slate-600 dark:text-slate-400 mb-12 text-center">제휴 문의, 콘텐츠 피드백, 또는 협업 제안은 언제나 환영합니다.</p>
+        <form class="space-y-6 bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl">
+            <div>
+                <label class="block text-slate-700 dark:text-slate-300 font-bold mb-2">성함</label>
+                <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none">
             </div>
-            <div class="form-group">
-                <label for="email">이메일 주소</label>
-                <input type="email" id="email" name="_replyto" placeholder="답변받으실 이메일 주소를 입력하세요" required>
+            <div>
+                <label class="block text-slate-700 dark:text-slate-300 font-bold mb-2">이메일</label>
+                <input type="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none">
             </div>
-            <div class="form-group">
-                <label for="message">문의 내용</label>
-                <textarea id="message" name="message" placeholder="상세한 문의 내용을 입력해 주세요" required style="height: 180px;"></textarea>
+            <div>
+                <label class="block text-slate-700 dark:text-slate-300 font-bold mb-2">문의 내용</label>
+                <textarea rows="5" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
             </div>
-            <button type="submit" class="btn-submit">메시지 보내기</button>
+            <button type="submit" class="w-full py-4 rounded-xl bg-blue-600 text-white font-black text-lg hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30">메시지 보내기</button>
         </form>
     </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="about.html">소개</a>
-                <a href="blog.html">블로그</a>
-                <a href="contact.html">문의</a>
-                <a href="privacy.html">개인정보처리방침</a>
-            </div>
-            <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
-        </div>
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-16 text-center text-slate-600 dark:text-slate-400">
+        &copy; 2026 ModernDevKit. All rights reserved.
     </footer>
     <script src="js/main.js"></script>
 </body>

@@ -1,55 +1,91 @@
-// Dark Mode Implementation
-const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
-
-if (currentTheme === 'dark') {
-    document.body.setAttribute('data-theme', 'dark');
-    if (themeToggle) themeToggle.textContent = '☀️ Light';
-}
-
-if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-        let theme = document.body.getAttribute('data-theme');
-        if (theme === 'dark') {
-            document.body.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
-            themeToggle.textContent = '🌙 Dark';
-        } else {
-            document.body.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            themeToggle.textContent = '☀️ Light';
-        }
-    });
-}
-
-// Navigation Highlight (Simple)
-const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-const navLinks = document.querySelectorAll('.nav-links a');
-
-navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath) {
-        link.style.color = 'var(--primary)';
-        link.style.fontWeight = 'bold';
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide Icons
+    if (window.lucide) {
+        window.lucide.createIcons();
     }
-});
 
-// Card Animation on Scroll (Basic Observer)
-const observerOptions = {
-    threshold: 0.1
-};
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    
+    // Check for saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        htmlElement.classList.add('dark');
+        updateThemeToggleIcon(true);
+    }
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlElement.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeToggleIcon(isDark);
+        });
+    }
+
+    function updateThemeToggleIcon(isDark) {
+        if (!themeToggle) return;
+        const textSpan = themeToggle.querySelector('span');
+        const iconContainer = themeToggle.querySelector('i');
+        
+        if (isDark) {
+            if (textSpan) textSpan.textContent = 'Light';
+            // Lucide icons are replaced by SVG, so we need to handle this carefully
+            // In a simple setup, we can just replace the innerHTML if needed or use separate icons
+        } else {
+            if (textSpan) textSpan.textContent = 'Dark';
         }
-    });
-}, observerOptions);
+        // Re-run lucide to update icons if they were swapped
+        if (window.lucide) window.lucide.createIcons();
+    }
 
-document.querySelectorAll('.card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'all 0.6s ease-out';
-    observer.observe(card);
+    // Mobile Menu Logic
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('hidden');
+            }
+        });
+    }
+
+    // Newsletter Form
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const button = newsletterForm.querySelector('button');
+            const originalContent = button.innerHTML;
+            
+            button.innerHTML = '✓ 구독 완료!';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = originalContent;
+                button.disabled = false;
+                newsletterForm.reset();
+            }, 3000);
+        });
+    }
+
+    // Intersection Observer for animations
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
 });

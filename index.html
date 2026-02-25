@@ -7,147 +7,244 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-F2RZ3S4QH0');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ModernDevKit | 고성능 개발자를 위한 생산성 및 기술 워크플로우 가이드</title>
     <meta name="description" content="현대적인 개발 생태계에서 생산성을 극대화하기 위한 도구 선별, 워크플로우 최적화, 그리고 지속 가능한 개발 문화에 대한 심층 가이드를 제공합니다.">
-    <meta name="keywords" content="개발자 생산성, VS Code 확장 프로그램, 터미널 환경, 개발자 건강, AI 코딩, 지식 관리 도구, 워크플로우 최적화">
+    
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4286055195982585" crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-4286055195982585">
+    
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: { 950: '#030213' }
+            }
+          }
+        }
+      }
+    </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">ModernDevKit</a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">
+                    ModernDevKit
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Home</a></li>
+                    <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">About</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button id="theme-toggle" class="theme-switch">🌙 Dark</button>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all active:scale-95">
+                    <i data-lucide="moon" class="w-4 h-4"></i>
+                    <span class="font-semibold text-sm">Dark</span>
+                </button>
+
+                <!-- Mobile Menu Btn -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300">
+                    <i data-lucide="menu"></i>
+                </button>
             </nav>
+
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden pb-6 animate-in">
+                <ul class="flex flex-col gap-4">
+                    <li><a href="index.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Home</a></li>
+                    <li><a href="blog.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Blog</a></li>
+                    <li><a href="about.html" class="block text-slate-600 dark:text-slate-300 font-semibold">About</a></li>
+                    <li><a href="contact.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Contact</a></li>
+                    <li><a href="privacy.html" class="block text-slate-600 dark:text-slate-300 font-semibold">Privacy</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <span class="tag">Exclusive Insight</span>
-                <h1>최적의 개발 환경이 최고의 코드를 만듭니다</h1>
-                <p>ModernDevKit은 수만 명의 개발자가 사용하는 도구와 워크플로우를 분석하여, 당신의 시간을 절약하고 창의성에 집중할 수 있는 실질적인 가이드를 제공합니다.</p>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-32 pb-20 px-6">
+            <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 dark:bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-indigo-400/20 dark:bg-indigo-600/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10 scroll-reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white mb-8 shadow-lg">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span class="font-bold text-sm">Exclusive Insight</span>
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
+                    최적의 개발 환경이<br>
+                    <span class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        최고의 코드를 만듭니다
+                    </span>
+                </h1>
+
+                <p class="text-xl text-slate-600 dark:text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    ModernDevKit은 수만 명의 개발자가 사용하는 도구와 워크플로우를 분석하여, 당신의 시간을 절약하고 창의성에 집중할 수 있는 실질적인 가이드를 제공합니다.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="blog.html" class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-2">
+                        시작하기 <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="about.html" class="px-8 py-4 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-lg border-2 border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-500 transition-all hover:scale-105">
+                        더 알아보기
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="container" style="margin-top: -3rem;">
-            <div class="section-header">
-                <h2>최신 가이드 및 분석</h2>
-                <p>개발 생산성 향상을 위한 전문 기술 아티클</p>
+        <!-- Blog Posts Section -->
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">최신 가이드 및 분석</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400">개발 생산성 향상을 위한 전문 기술 아티클</p>
             </div>
-            
-            <div class="content-grid">
-                <!-- Blog Post 1 -->
-                <article class="card">
-                    <div class="card-meta">2026. 02. 25 · 8 min read</div>
-                    <span class="tag">Productivity</span>
-                    <h3>2026년 VS Code 최적의 확장 프로그램 10선: IDE를 뛰어넘는 에디터 구축</h3>
-                    <p>단순한 에디터를 넘어 강력한 생산성 도구로 진화한 VS Code를 200% 활용하기 위한 필수 확장 프로그램 10가지를 엄선했습니다. AI 코딩부터 성능 모니터링까지 다룹니다.</p>
-                    <div class="card-footer">
-                        <span class="author">By Admin</span>
-                        <a href="posts/post1.html" class="read-more">전문 읽기 &rarr;</a>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <article class="group relative scroll-reveal">
+                    <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2">
+                        <div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 2026. 02. 25</span>
+                            <span>·</span>
+                            <span>8 min read</span>
+                        </div>
+                        <span class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-xs mb-4 w-fit">Productivity</span>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">2026년 VS Code 최적의 확장 프로그램 10선: IDE를 뛰어넘는 에디터 구축</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed flex-grow">단순한 에디터를 넘어 강력한 생산성 도구로 진화한 VS Code를 200% 활용하기 위한 필수 확장 프로그램 10가지를 엄선했습니다.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700">
+                            <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                <i data-lucide="user" class="w-4 h-4"></i> <span class="font-semibold">Admin</span>
+                            </div>
+                            <a href="posts/post1.html" class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm hover:gap-3 transition-all">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Post 2 -->
-                <article class="card">
-                    <div class="card-meta">2026. 02. 24 · 12 min read</div>
-                    <span class="tag">Mindset</span>
-                    <h3>디지털 미니멀리즘: 불필요한 알림으로부터 해방되는 딥 워크 전략</h3>
-                    <p>집중력은 개발자의 가장 큰 자산입니다. 현대의 디지털 환경에서 집중력을 조각내는 요소를 제거하고 딥 워크(Deep Work) 상태를 유지하기 위한 실행 가능한 전략을 공유합니다.</p>
-                    <div class="card-footer">
-                        <span class="author">By Admin</span>
-                        <a href="posts/post2.html" class="read-more">전문 읽기 &rarr;</a>
+                <!-- Blog Card 2 -->
+                <article class="group relative scroll-reveal" style="transition-delay: 0.1s">
+                    <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2">
+                        <div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 2026. 02. 24</span>
+                            <span>·</span>
+                            <span>12 min read</span>
+                        </div>
+                        <span class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-xs mb-4 w-fit">Mindset</span>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">디지털 미니멀리즘: 불필요한 알림으로부터 해방되는 딥 워크 전략</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed flex-grow">현대의 디지털 환경에서 집중력을 조각내는 요소를 제거하고 딥 워크(Deep Work) 상태를 유지하기 위한 실행 가능한 전략을 공유합니다.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700">
+                            <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                <i data-lucide="user" class="w-4 h-4"></i> <span class="font-semibold">Admin</span>
+                            </div>
+                            <a href="posts/post2.html" class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm hover:gap-3 transition-all">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Blog Post 3 -->
-                <article class="card">
-                    <div class="card-meta">2026. 02. 23 · 10 min read</div>
-                    <span class="tag">CLI</span>
-                    <h3>터미널 환경 구축 가이드: Oh My Zsh와 Starship으로 생산성 높이기</h3>
-                    <p>매일 사용하는 터미널을 더 아름답고 기능적으로 만드는 방법을 단계별로 안내합니다. 강력한 커스터마이징을 통해 쉘 생산성을 배로 높이는 고급 설정을 다룹니다.</p>
-                    <div class="card-footer">
-                        <span class="author">By Admin</span>
-                        <a href="posts/post3.html" class="read-more">전문 읽기 &rarr;</a>
-                    </div>
-                </article>
-
-                <!-- Blog Post 4 -->
-                <article class="card">
-                    <div class="card-meta">2026. 02. 22 · 7 min read</div>
-                    <span class="tag">Hardware</span>
-                    <h3>거북목 방지를 위한 최적의 개발 데스크 테크 셋업 및 인체공학 가이드</h3>
-                    <p>장시간 작업하는 개발자에게 건강은 필수입니다. 모니터 암, 기계식 키보드, 인체공학적 마우스 선택 기준과 올바른 자세 가이드를 전문가의 관점에서 정리했습니다.</p>
-                    <div class="card-footer">
-                        <span class="author">By Admin</span>
-                        <a href="posts/post4.html" class="read-more">전문 읽기 &rarr;</a>
-                    </div>
-                </article>
-
-                <!-- Blog Post 5 -->
-                <article class="card">
-                    <div class="card-meta">2026. 02. 21 · 15 min read</div>
-                    <span class="tag">AI Strategy</span>
-                    <h3>AI 시대, 주니어 개발자가 살아남기 위한 5가지 핵심 학습 역량</h3>
-                    <p>AI가 코드를 작성해주는 시대에 개발자가 갖춰야 할 핵심 역량은 무엇일까요? 문제 해결 능력과 아키텍처 설계에 집중하는 전략적 학습법을 심도 있게 분석합니다.</p>
-                    <div class="card-footer">
-                        <span class="author">By Admin</span>
-                        <a href="posts/post5.html" class="read-more">전문 읽기 &rarr;</a>
-                    </div>
-                </article>
-
-                <!-- Blog Post 6 -->
-                <article class="card">
-                    <div class="card-meta">2026. 02. 20 · 9 min read</div>
-                    <span class="tag">Knowledge Management</span>
-                    <h3>노션(Notion) vs 옵시디언(Obsidian): 개발자를 위한 지식 관리 도구 비교</h3>
-                    <p>방대한 기술 지식을 체계적으로 정리하고 싶으신가요? 협업 중심의 노션과 로컬 중심의 옵시디언의 장단점을 철저히 비교 분석하여 당신에게 맞는 도구를 추천합니다.</p>
-                    <div class="card-footer">
-                        <span class="author">By Admin</span>
-                        <a href="posts/post6.html" class="read-more">전문 읽기 &rarr;</a>
+                <!-- Blog Card 3 -->
+                <article class="group relative scroll-reveal" style="transition-delay: 0.2s">
+                    <div class="h-full bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col hover:-translate-y-2">
+                        <div class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
+                            <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 2026. 02. 23</span>
+                            <span>·</span>
+                            <span>10 min read</span>
+                        </div>
+                        <span class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold text-xs mb-4 w-fit">CLI</span>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">터미널 환경 구축 가이드: Oh My Zsh와 Starship으로 생산성 높이기</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed flex-grow">매일 사용하는 터미널을 더 아름답고 기능적으로 만드는 방법을 단계별로 안내합니다. 강력한 커스터마이징 설정을 다룹니다.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200 dark:border-slate-700">
+                            <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                                <i data-lucide="user" class="w-4 h-4"></i> <span class="font-semibold">Admin</span>
+                            </div>
+                            <a href="posts/post3.html" class="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-bold text-sm hover:gap-3 transition-all">전문 읽기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="container" style="margin-bottom: 5rem;">
-            <div class="newsletter-box">
-                <h3>더 나은 개발자가 되고 싶으신가요?</h3>
-                <p>매주 새로운 생산성 도구와 기술 트렌드 소식을 이메일로 받아보세요.</p>
-                <form action="https://formspree.io/f/xkovkpab" method="POST" style="display: flex; gap: 10px; margin-top: 1.5rem;">
-                    <input type="email" name="email" placeholder="email@example.com" required style="flex: 1; padding: 0.8rem; border-radius: 6px; border: 1px solid var(--border);">
-                    <button type="submit" class="btn-primary" style="padding: 0.8rem 1.5rem;">구독하기</button>
-                </form>
+        <!-- Newsletter Section -->
+        <section class="max-w-4xl mx-auto px-6 py-20 scroll-reveal">
+            <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 p-12 shadow-2xl">
+                <div class="relative z-10 text-center">
+                    <div class="flex justify-center mb-6">
+                        <div class="p-4 bg-white/20 backdrop-blur-sm rounded-2xl">
+                            <i data-lucide="sparkles" class="text-white w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-4xl font-black text-white mb-4">더 나은 개발자가 되고 싶으신가요?</h3>
+                    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">매주 새로운 생산성 도구와 기술 트렌드 소식을 이메일로 받아보세요.</p>
+                    
+                    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                        <div class="flex-1 relative">
+                            <i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5"></i>
+                            <input type="email" placeholder="email@example.com" required class="w-full pl-12 pr-4 py-4 rounded-xl bg-white text-slate-900 focus:outline-none focus:ring-4 focus:ring-white/30 transition-all">
+                        </div>
+                        <button type="submit" class="px-8 py-4 rounded-xl bg-white text-blue-600 font-bold hover:bg-slate-100 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg">
+                            구독하기 <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                    <p class="text-sm text-white/70 mt-4">언제든지 구독을 취소할 수 있습니다. 스팸은 절대 보내지 않습니다.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="about.html">소개</a>
-                <a href="blog.html">블로그</a>
-                <a href="contact.html">문의</a>
-                <a href="privacy.html">개인정보처리방침</a>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">ModernDevKit</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed max-w-md">
+                        현대적인 개발 생태계에서 생산성을 극대화하기 위한 도구 선별, 워크플로우 최적화, 그리고 지속 가능한 개발 문화에 대한 심층 가이드를 제공합니다.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="p-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-blue-600 hover:text-white transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">빠른 링크</h4>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">소개</a></li>
+                        <li><a href="blog.html" class="hover:text-blue-600 transition-colors">블로그</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">문의</a></li>
+                        <li><a href="privacy.html" class="hover:text-blue-600 transition-colors">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-4">리소스</h4>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">가이드</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">도구 추천</a></li>
+                    </ul>
+                </div>
             </div>
-            <p>&copy; 2026 ModernDevKit. All rights reserved.</p>
+            <div class="pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-600 dark:text-slate-400">
+                &copy; 2026 ModernDevKit. All rights reserved.
+            </div>
         </div>
     </footer>
 
