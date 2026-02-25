@@ -8,84 +8,57 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
     
-    // Check for saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     if (savedTheme === 'dark') {
         htmlElement.classList.add('dark');
-        updateThemeToggleIcon(true);
     }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const isDark = htmlElement.classList.toggle('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            updateThemeToggleIcon(isDark);
         });
     }
 
-    function updateThemeToggleIcon(isDark) {
-        if (!themeToggle) return;
-        const textSpan = themeToggle.querySelector('span');
-        const iconContainer = themeToggle.querySelector('i');
-        
-        if (isDark) {
-            if (textSpan) textSpan.textContent = 'Light';
-            // Lucide icons are replaced by SVG, so we need to handle this carefully
-            // In a simple setup, we can just replace the innerHTML if needed or use separate icons
-        } else {
-            if (textSpan) textSpan.textContent = 'Dark';
-        }
-        // Re-run lucide to update icons if they were swapped
-        if (window.lucide) window.lucide.createIcons();
-    }
+    // Blog Filtering Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
 
-    // Mobile Menu Logic
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    if (filterBtns.length > 0 && blogCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                
+                // Update button styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-blue-600', 'text-white', 'border-blue-600');
+                    b.classList.add('text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
+                });
+                btn.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+                btn.classList.remove('text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
 
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = !mobileMenu.classList.contains('hidden');
-            if (isOpen) {
-                mobileMenu.classList.add('hidden');
-            } else {
-                mobileMenu.classList.remove('hidden');
-            }
+                // Filter cards
+                blogCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
         });
     }
 
-    // Newsletter Form
-    const newsletterForm = document.getElementById('newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const button = newsletterForm.querySelector('button');
-            const originalContent = button.innerHTML;
-            
-            button.innerHTML = '✓ 구독 완료!';
-            button.disabled = true;
-            
-            setTimeout(() => {
-                button.innerHTML = originalContent;
-                button.disabled = false;
-                newsletterForm.reset();
-            }, 3000);
-        });
-    }
-
-    // Intersection Observer for animations
+    // Scroll Reveal Animation
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => {
-        el.style.opacity = '0';
-        observer.observe(el);
-    });
+    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 });
