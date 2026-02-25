@@ -1,24 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
-    if (window.lucide) {
-        window.lucide.createIcons();
-    }
+    const initIcons = () => {
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    };
+    initIcons();
 
     // Theme Toggle Logic
     const themeToggles = document.querySelectorAll('.theme-toggle');
     const htmlElement = document.documentElement;
     
+    const updateThemeUI = (isDark) => {
+        themeToggles.forEach(toggle => {
+            const span = toggle.querySelector('span');
+            const icon = toggle.querySelector('i');
+            
+            if (isDark) {
+                if (span) span.textContent = 'Light';
+                if (icon) icon.setAttribute('data-lucide', 'sun');
+            } else {
+                if (span) span.textContent = 'Dark';
+                if (icon) icon.setAttribute('data-lucide', 'moon');
+            }
+        });
+        initIcons();
+    };
+
     const savedTheme = localStorage.getItem('theme') || 'light';
-    if (savedTheme === 'dark') {
+    const isInitialDark = savedTheme === 'dark';
+    if (isInitialDark) {
         htmlElement.classList.add('dark');
     }
+    updateThemeUI(isInitialDark);
 
     themeToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             const isDark = htmlElement.classList.toggle('dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            // Re-run lucide to update icons if they are changed
-            if (window.lucide) window.lucide.createIcons();
+            updateThemeUI(isDark);
         });
     });
 
@@ -38,14 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && e.target !== mobileMenuBtn) {
                 mobileMenu.classList.add('hidden');
             }
         });
 
-        // Close menu when clicking a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
