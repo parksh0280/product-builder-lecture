@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next.js & Tailwind 최적화 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-20 max-w-4xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <h1 class="text-4xl md:text-5xl font-black mb-8 leading-tight">Next.js & Tailwind 최적화 가이드</h1>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8 text-justify">
+                <p class="text-xl text-slate-600 dark:text-slate-400">성능은 프론트엔드 개발의 핵심 지표입니다. Next.js와 Tailwind CSS를 사용하여 어떻게 하면 100점짜리 Lighthouse 점수를 받을 수 있을까요?</p>
+                
+                <h2 class="text-2xl font-bold">1. 서버 컴포넌트(Server Components) 활용</h2>
+                <p>불필요한 클라이언트 사이드 자바스크립트를 줄이기 위해 서버 컴포넌트를 적극 활용하세요. 데이터 패칭은 서버에서 처리하고, 오직 인터랙션이 필요한 부분만 클라이언트 컴포넌트로 분리합니다.</p>
+
+                <h2 class="text-2xl font-bold">2. Tailwind CSS의 JIT 모드와 트리 쉐이킹</h2>
+                <p>사용하지 않는 클래스는 빌드 시점에 완벽하게 제거됩니다. Tailwind v4에서는 더욱 강력해진 엔진이 여러분의 번들 사이즈를 획기적으로 줄여줄 것입니다.</p>
+
+                <h2 class="text-2xl font-bold">3. 이미지 및 폰트 최적화</h2>
+                <p>Next.js의 Image 컴포넌트를 사용하여 WebP/Avif 포맷 변환과 Lazy Loading을 자동화하세요. 또한, 로컬 폰트를 활용하여 Layout Shift(CLS)를 방지합니다.</p>
+            </div>
+            <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../tutorials.html" class="text-blue-600 font-bold flex items-center gap-2"><i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기</a>
+            </div>
+        </article>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>

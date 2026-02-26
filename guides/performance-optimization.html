@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성능 최적화 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-20 max-w-4xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <h1 class="text-4xl md:text-5xl font-black mb-8 leading-tight">프론트엔드 성능 최적화 체크리스트</h1>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8 text-justify">
+                <p class="text-xl text-slate-600 dark:text-slate-400">사용자 경험을 결정짓는 핵심 요소, 로딩 속도와 응답성을 극대화하기 위한 가이드입니다.</p>
+                
+                <h2 class="text-2xl font-bold">1. Core Web Vitals 이해하기</h2>
+                <p>LCP(Largest Contentful Paint), FID(First Input Delay), CLS(Cumulative Layout Shift) 지표를 측정하고 개선하세요. 구글 검색 순위에도 결정적인 영향을 미칩니다.</p>
+
+                <h2 class="text-2xl font-bold">2. 리소스 압축 및 캐싱</h2>
+                <p>이미지는 WebP 포맷을 사용하고, 정적 자산은 강력한 브라우저 캐싱 전략을 적용하세요. CDN(Content Delivery Network) 활용은 필수입니다.</p>
+
+                <h2 class="text-2xl font-bold">3. 코드 분할(Code Splitting)</h2>
+                <p>페이지 로드 시 모든 자바스크립트를 불러오는 대신, 필요한 시점에만 동적으로 모듈을 로드하여 초기 구동 속도를 높이세요.</p>
+            </div>
+            <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../guides.html" class="text-blue-600 font-bold flex items-center gap-2"><i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기</a>
+            </div>
+        </article>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>

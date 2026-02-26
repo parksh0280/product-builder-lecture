@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2RZ3S4QH0"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2RZ3S4QH0');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아키텍처 가이드 | ModernDevKit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>tailwind.config={darkMode:'class'}</script>
+</head>
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <nav class="flex items-center justify-between h-20">
+                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
+                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
+                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
+                </ul>
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-20 max-w-4xl mx-auto px-6">
+        <article class="scroll-reveal">
+            <h1 class="text-4xl md:text-5xl font-black mb-8 leading-tight">현대적 소프트웨어 아키텍처 설계 가이드</h1>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8 text-justify">
+                <p class="text-xl text-slate-600 dark:text-slate-400">비즈니스의 복잡도가 증가함에 따라 확장 가능하고 유지보수가 쉬운 아키텍처를 설계하는 것이 무엇보다 중요해졌습니다.</p>
+                
+                <h2 class="text-2xl font-bold">1. 모노리스 vs 마이크로서비스</h2>
+                <p>무조건 마이크로서비스가 정답은 아닙니다. 초기 단계의 서비스라면 모노리스 구조로 빠르게 시장에 검증을 받고, 규모가 커짐에 따라 점진적으로 분리하는 전략이 유효합니다.</p>
+
+                <h2 class="text-2xl font-bold">2. 계층화 아키텍처(Layered Architecture)</h2>
+                <p>프레젠테이션, 비즈니스 로직, 데이터 접근 계층을 명확히 분리하여 각 계층이 자신의 역할에만 집중하게 하세요. 이는 코드의 가독성과 테스트 용이성을 높여줍니다.</p>
+
+                <h2 class="text-2xl font-bold">3. 이벤트 기반 아키텍처</h2>
+                <p>시스템 간의 결합도를 낮추기 위해 이벤트 기반의 비동기 통신을 도입하세요. 메시지 큐를 활용하면 시스템의 안정성과 확장성을 획기적으로 개선할 수 있습니다.</p>
+            </div>
+            <div class="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+                <a href="../guides.html" class="text-blue-600 font-bold flex items-center gap-2"><i data-lucide="arrow-left" class="w-4 h-4"></i> 목록으로 돌아가기</a>
+            </div>
+        </article>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>

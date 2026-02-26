@@ -15,20 +15,30 @@
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
                     <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
                     <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
                     <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button class="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
+
     <main class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">Recommended Tools</h1>
-            <p class="text-xl text-slate-600 dark:text-slate-400">생산성을 200% 높여주는 엄선된 개발 도구 리스트</p>
+        <div class="text-center mb-16 scroll-reveal">
+            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Recommended Tools</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">생산성을 200% 높여주는 엄선된 개발 도구 리스트</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all shadow-lg text-center scroll-reveal">
@@ -40,7 +50,7 @@
                     <li><strong>Cron</strong> - 개발자 친화적 캘린더</li>
                     <li><strong>Arc Browser</strong> - 몰입형 브라우징 경험</li>
                 </ul>
-                <a href="#" class="font-bold text-blue-600">컬렉션 보기</a>
+                <a href="tools_detail/productivity-collection.html" class="font-bold text-blue-600 hover:underline">컬렉션 보기</a>
             </div>
             <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 transition-all shadow-lg text-center scroll-reveal">
                 <i data-lucide="code" class="w-10 h-10 mx-auto text-indigo-600 mb-6"></i>
@@ -51,7 +61,7 @@
                     <li><strong>Postman</strong> - API 테스트 필수 도구</li>
                     <li><strong>Docker</strong> - 일관된 개발 환경 구축</li>
                 </ul>
-                <a href="#" class="font-bold text-indigo-600">컬렉션 보기</a>
+                <a href="tools_detail/development-collection.html" class="font-bold text-indigo-600 hover:underline">컬렉션 보기</a>
             </div>
             <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-purple-500 transition-all shadow-lg text-center scroll-reveal">
                 <i data-lucide="cpu" class="w-10 h-10 mx-auto text-purple-600 mb-6"></i>
@@ -62,10 +72,11 @@
                     <li><strong>Dell UltraSharp</strong> - 색정확도 높은 모니터</li>
                     <li><strong>CalDigit TS4</strong> - 원케이블 도킹 스테이션</li>
                 </ul>
-                <a href="#" class="font-bold text-purple-600">컬렉션 보기</a>
+                <a href="tools_detail/hardware-collection.html" class="font-bold text-purple-600 hover:underline">컬렉션 보기</a>
             </div>
         </div>
     </main>
+
     <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -89,7 +100,7 @@
                     <ul class="space-y-4">
                         <li><a href="tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
                         <li><a href="guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
-                        <li><a href="tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
+                        <li><a href="tools.html" class="text-blue-600 font-bold transition-colors">도구 추천</a></li>
                         <li><a href="faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
                     </ul>
                 </div>

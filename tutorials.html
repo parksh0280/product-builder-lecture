@@ -15,48 +15,59 @@
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
                     <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
                     <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
                     <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button class="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
+
     <main class="py-20 max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">Step-by-Step Tutorials</h1>
-            <p class="text-xl text-slate-600 dark:text-slate-400">실무에 바로 적용 가능한 실전 튜토리얼 가이드</p>
+        <div class="text-center mb-16 scroll-reveal">
+            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Step-by-Step Tutorials</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">실무에 바로 적용 가능한 실전 튜토리얼 가이드</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal">
+            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
                 <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i data-lucide="terminal"></i></div>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">CLI 생산성 마스터하기</h2>
                 <p class="text-slate-600 dark:text-slate-400 mb-6">Zsh, Tmux, 그리고 Neovim을 조합하여 마우스 없는 개발 환경을 구축하는 완벽한 가이드를 제공합니다.</p>
-                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="tutorials/cli-productivity.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal">
+            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
                 <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i data-lucide="layout"></i></div>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Next.js & Tailwind 최적화</h2>
                 <p class="text-slate-600 dark:text-slate-400 mb-6">성능을 극대화하고 SEO를 최적화하며, 재사용 가능한 컴포넌트 아키텍처를 설계하는 방법을 배웁니다.</p>
-                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="tutorials/nextjs-tailwind.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal">
+            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
                 <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center text-green-600 mb-6"><i data-lucide="git-branch"></i></div>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">협업을 위한 Git 워크플로우</h2>
                 <p class="text-slate-600 dark:text-slate-400 mb-6">Git Flow, GitHub Flow를 비교 분석하고, 충돌 없는 브랜치 전략과 코드 리뷰 프로세스를 구축합니다.</p>
-                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="tutorials/git-workflow.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal">
+            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
                 <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center text-orange-600 mb-6"><i data-lucide="code-2"></i></div>
                 <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">고급 TypeScript 패턴</h2>
                 <p class="text-slate-600 dark:text-slate-400 mb-6">Generic, Conditional Types 등 고급 기능을 활용하여 타입 안전성이 보장되는 견고한 라이브러리를 설계합니다.</p>
-                <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                <a href="tutorials/typescript-patterns.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
         </div>
     </main>
+
     <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -78,7 +89,7 @@
                 <div>
                     <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">리소스</h4>
                     <ul class="space-y-4">
-                        <li><a href="tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="tutorials.html" class="text-blue-600 font-bold transition-colors">튜토리얼</a></li>
                         <li><a href="guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
                         <li><a href="tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
                         <li><a href="faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>

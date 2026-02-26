@@ -15,45 +15,105 @@
     <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6">
             <nav class="flex items-center justify-between h-20">
-                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">ModernDevKit</a>
+                <a href="index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
                 <ul class="hidden md:flex items-center gap-8">
                     <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
                     <li><a href="blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
                     <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
+                    <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
+                    <li><a href="privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
                 </ul>
-                <button class="theme-toggle" class="px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"><i data-lucide="moon" class="w-4 h-4"></i></button>
+                <div class="flex items-center gap-4">
+                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 dark:text-slate-300">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
+
     <main class="py-20 max-w-4xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4">FAQ</h1>
-            <p class="text-xl text-slate-600 dark:text-slate-400">자주 묻는 질문과 답변</p>
+        <div class="text-center mb-16 scroll-reveal">
+            <h1 class="text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">FAQ</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">자주 묻는 질문과 답변</p>
         </div>
         <div class="space-y-6">
-            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all">
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">ModernDevKit의 목표는 무엇인가요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">현대적인 개발 생태계에서 개발자들이 겪는 기술적 복잡성을 해결하고, 생산성을 극대화할 수 있는 최선의 도구와 워크플로우를 제안하는 것입니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
                 <summary class="flex items-center justify-between cursor-pointer list-none">
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white">콘텐츠의 주기는 어떻게 되나요?</h3>
                     <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
                 </summary>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">ModernDevKit은 매주 최소 1회 이상의 고품질 기술 아티클과 가이드를 발행하고 있습니다. 뉴스레터를 구독하시면 가장 빠르게 소식을 받아보실 수 있습니다.</p>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">매주 최소 1회 이상의 심층 아티클과 가이드를 발행하고 있습니다. 최신 기술 트렌드를 빠르게 반영하기 위해 노력합니다.</p>
             </details>
-            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all">
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
                 <summary class="flex items-center justify-between cursor-pointer list-none">
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white">제휴 및 협업이 가능한가요?</h3>
                     <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
                 </summary>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">네, 가능합니다. Contact 페이지를 통해 문의를 남겨주시면 검토 후 연락드리겠습니다. 개발자 생산성 향상에 도움이 되는 제품이나 서비스라면 언제든 환영합니다.</p>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">네, 가능합니다. Contact 페이지를 통해 문의를 남겨주시면 검토 후 연락드리겠습니다.</p>
             </details>
-            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all">
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
                 <summary class="flex items-center justify-between cursor-pointer list-none">
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white">사용된 기술 스택이 무엇인가요?</h3>
                     <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
                 </summary>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">본 사이트는 성능을 위해 순수 HTML, Tailwind CSS, JavaScript로 구축되었으며, Cloudflare Pages를 통해 고속 배포되고 있습니다.</p>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">본 사이트는 HTML, Tailwind CSS, JavaScript로 구축되었으며, 성능 최적화를 위해 라이브러리 사용을 최소화했습니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">튜토리얼은 초보자도 따라 할 수 있나요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">네, 기초부터 심화까지 단계별로 설명하고 있습니다. 다만, 기본적인 프로그래밍 지식이 있다면 더 원활하게 따라오실 수 있습니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">도구 추천 기준이 무엇인가요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">실제 업무 환경에서의 생산성 향상 정도, 커뮤니티 지원, 그리고 도구의 지속 가능성을 종합적으로 고려하여 선정합니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">유료 멤버십 계획이 있나요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">현재 모든 콘텐츠는 무료로 제공되고 있습니다. 추후 심화 강의나 커뮤니티 전용 혜택을 위한 멤버십 도입을 검토 중입니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">콘텐츠 번역 참여가 가능한가요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">글로벌 커뮤니티 확장을 위해 번역 기여를 환영합니다. 관심 있으신 분은 이메일로 연락 주세요.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">오프라인 워크샵도 진행하나요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">현재는 온라인 콘텐츠에 집중하고 있으나, 분기별로 소규모 네트워킹 데이나 실전 워크샵을 기획하고 있습니다.</p>
+            </details>
+            <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-md transition-all scroll-reveal">
+                <summary class="flex items-center justify-between cursor-pointer list-none">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">커스텀 도구 제작 요청이 가능한가요?</h3>
+                    <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">특정 비즈니스 요구에 맞는 자동화 스크립트나 생산성 도구 제작 상담도 진행하고 있습니다. 문의 페이지를 이용해 주세요.</p>
             </details>
         </div>
     </main>
+
     <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-12 transition-colors duration-500">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -78,7 +138,7 @@
                         <li><a href="tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
                         <li><a href="guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
                         <li><a href="tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
-                        <li><a href="faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
+                        <li><a href="faq.html" class="text-blue-600 font-bold transition-colors">FAQ</a></li>
                     </ul>
                 </div>
             </div>
