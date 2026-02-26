@@ -12,38 +12,11 @@
     <script>tailwind.config={darkMode:'class'}</script>
 </head>
 <body class="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-500 text-slate-900 dark:text-slate-100">
-    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <nav class="flex items-center justify-between h-20">
-                <a href="../index.html" class="text-2xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform">ModernDevKit</a>
-                <ul class="hidden md:flex items-center gap-8">
-                    <li><a href="../index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Home</a></li>
-                    <li><a href="../blog.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Blog</a></li>
-                    <li><a href="../about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">About</a></li>
-                    <li><a href="../contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Contact</a></li>
-                    <li><a href="../privacy.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 font-semibold transition-colors">Privacy</a></li>
-                </ul>
-                <div class="flex items-center gap-4">
-                    <button class="theme-toggle flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 transition-all">
-                        <i data-lucide="moon" class="w-4 h-4"></i><span class="font-semibold text-sm">Dark</span>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <script src="../js/header.js"></script>
 
     <main class="py-20 max-w-4xl mx-auto px-6">
         <article class="scroll-reveal">
-            <header class="mb-12">
-                <div class="flex items-center gap-2 text-purple-600 font-bold text-sm mb-4 uppercase tracking-wider">
-                    <i data-lucide="layout" class="w-4 h-4"></i> Tutorial
-                </div>
-                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">[심층 분석] 2026년 웹 프론트엔드의 정석: Next.js & Tailwind CSS 성능 최적화의 모든 것</h1>
-                <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
-                    <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 26</div>
-                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> 프론트엔드 아키텍트 김민준</div>
-                </div>
-            </header>
+            
 
             <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8 leading-relaxed text-justify">
                 <p class="text-xl font-medium text-slate-700 dark:text-slate-300 mb-8">
