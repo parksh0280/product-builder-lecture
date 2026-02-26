@@ -27,38 +27,50 @@
             <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">생산성을 200% 높여주는 엄선된 개발 도구 리스트</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 transition-all shadow-lg text-center scroll-reveal">
-                <i data-lucide="layers" class="w-10 h-10 mx-auto text-blue-600 mb-6"></i>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Productivity</h2>
-                <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8">
-                    <li><strong>Raycast</strong> - 차세대 macOS 런처</li>
-                    <li><strong>Obsidian</strong> - 연결 기반 지식 관리</li>
-                    <li><strong>Cron</strong> - 개발자 친화적 캘린더</li>
-                    <li><strong>Arc Browser</strong> - 몰입형 브라우징 경험</li>
-                </ul>
-                <a href="tools_detail/productivity-collection.html" class="font-bold text-blue-600 hover:underline">컬렉션 보기</a>
+            <!-- Tool 1 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col text-center">
+                    <i data-lucide="layers" class="w-10 h-10 mx-auto text-blue-600 mb-6"></i>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Productivity</h2>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8 flex-grow">
+                        <li><strong>Raycast</strong> - 차세대 macOS 런처</li>
+                        <li><strong>Obsidian</strong> - 연결 기반 지식 관리</li>
+                        <li><strong>Cron</strong> - 개발자 친화적 캘린더</li>
+                        <li><strong>Arc Browser</strong> - 몰입형 브라우징 경험</li>
+                    </ul>
+                    <a href="tools_detail/productivity-collection.html" class="font-bold text-blue-600 hover:underline">컬렉션 보기</a>
+                </div>
             </div>
-            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 transition-all shadow-lg text-center scroll-reveal">
-                <i data-lucide="code" class="w-10 h-10 mx-auto text-indigo-600 mb-6"></i>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Development</h2>
-                <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8">
-                    <li><strong>VS Code</strong> - 업계 표준 에디터</li>
-                    <li><strong>Warp</strong> - AI 기반 현대적 터미널</li>
-                    <li><strong>Postman</strong> - API 테스트 필수 도구</li>
-                    <li><strong>Docker</strong> - 일관된 개발 환경 구축</li>
-                </ul>
-                <a href="tools_detail/development-collection.html" class="font-bold text-indigo-600 hover:underline">컬렉션 보기</a>
+            <!-- Tool 2 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col text-center">
+                    <i data-lucide="code" class="w-10 h-10 mx-auto text-indigo-600 mb-6"></i>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Development</h2>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8 flex-grow">
+                        <li><strong>VS Code</strong> - 업계 표준 에디터</li>
+                        <li><strong>Warp</strong> - AI 기반 현대적 터미널</li>
+                        <li><strong>Postman</strong> - API 테스트 필수 도구</li>
+                        <li><strong>Docker</strong> - 일관된 개발 환경 구축</li>
+                    </ul>
+                    <a href="tools_detail/development-collection.html" class="font-bold text-indigo-600 hover:underline">컬렉션 보기</a>
+                </div>
             </div>
-            <div class="group p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 hover:border-purple-500 transition-all shadow-lg text-center scroll-reveal">
-                <i data-lucide="cpu" class="w-10 h-10 mx-auto text-purple-600 mb-6"></i>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Hardware</h2>
-                <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8">
-                    <li><strong>HHKB</strong> - 개발자의 종착역 키보드</li>
-                    <li><strong>MX Master 3S</strong> - 인체공학 마우스</li>
-                    <li><strong>Dell UltraSharp</strong> - 색정확도 높은 모니터</li>
-                    <li><strong>CalDigit TS4</strong> - 원케이블 도킹 스테이션</li>
-                </ul>
-                <a href="tools_detail/hardware-collection.html" class="font-bold text-purple-600 hover:underline">컬렉션 보기</a>
+            <!-- Tool 3 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col text-center">
+                    <i data-lucide="cpu" class="w-10 h-10 mx-auto text-purple-600 mb-6"></i>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Hardware</h2>
+                    <ul class="text-slate-600 dark:text-slate-400 space-y-3 mb-8 flex-grow">
+                        <li><strong>HHKB</strong> - 개발자의 종착역 키보드</li>
+                        <li><strong>MX Master 3S</strong> - 인체공학 마우스</li>
+                        <li><strong>Dell UltraSharp</strong> - 색정확도 높은 모니터</li>
+                        <li><strong>CalDigit TS4</strong> - 원케이블 도킹 스테이션</li>
+                    </ul>
+                    <a href="tools_detail/hardware-collection.html" class="font-bold text-purple-600 hover:underline">컬렉션 보기</a>
+                </div>
             </div>
         </div>
     </main>
@@ -84,9 +96,9 @@
                 <div>
                     <h4 class="text-slate-900 dark:text-white font-bold text-lg mb-6">리소스</h4>
                     <ul class="space-y-4">
-                        <li><a href="tutorials.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">튜토리얼</a></li>
+                        <li><a href="tutorials.html" class="text-blue-600 font-bold transition-colors">튜토리얼</a></li>
                         <li><a href="guides.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">가이드</a></li>
-                        <li><a href="tools.html" class="text-blue-600 font-bold transition-colors">도구 추천</a></li>
+                        <li><a href="tools.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">도구 추천</a></li>
                         <li><a href="faq.html" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors">FAQ</a></li>
                     </ul>
                 </div>

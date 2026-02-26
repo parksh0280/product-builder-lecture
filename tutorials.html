@@ -27,29 +27,45 @@
             <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">실무에 바로 적용 가능한 실전 튜토리얼 가이드</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i data-lucide="terminal"></i></div>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">CLI 생산성 마스터하기</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">Zsh, Tmux, 그리고 Neovim을 조합하여 마우스 없는 개발 환경을 구축하는 완벽한 가이드를 제공합니다.</p>
-                <a href="tutorials/cli-productivity.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <!-- Card 1 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i data-lucide="terminal"></i></div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">CLI 생산성 마스터하기</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Zsh, Tmux, 그리고 Neovim을 조합하여 마우스 없는 개발 환경을 구축하는 완벽한 가이드를 제공합니다.</p>
+                    <a href="tutorials/cli-productivity.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i data-lucide="layout"></i></div>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Next.js & Tailwind 최적화</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">성능을 극대화하고 SEO를 최적화하며, 재사용 가능한 컴포넌트 아키텍처를 설계하는 방법을 배웁니다.</p>
-                <a href="tutorials/nextjs-tailwind.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <!-- Card 2 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i data-lucide="layout"></i></div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Next.js & Tailwind 최적화</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">성능을 극대화하고 SEO를 최적화하며, 재사용 가능한 컴포넌트 아키텍처를 설계하는 방법을 배웁니다.</p>
+                    <a href="tutorials/nextjs-tailwind.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center text-green-600 mb-6"><i data-lucide="git-branch"></i></div>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">협업을 위한 Git 워크플로우</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">Git Flow, GitHub Flow를 비교 분석하고, 충돌 없는 브랜치 전략과 코드 리뷰 프로세스를 구축합니다.</p>
-                <a href="tutorials/git-workflow.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <!-- Card 3 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center text-green-600 mb-6"><i data-lucide="git-branch"></i></div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">협업을 위한 Git 워크플로우</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Git Flow, GitHub Flow를 비교 분석하고, 충돌 없는 브랜치 전략과 코드 리뷰 프로세스를 구축합니다.</p>
+                    <a href="tutorials/git-workflow.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center text-orange-600 mb-6"><i data-lucide="code-2"></i></div>
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">고급 TypeScript 패턴</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">Generic, Conditional Types 등 고급 기능을 활용하여 타입 안전성이 보장되는 견고한 라이브러리를 설계합니다.</p>
-                <a href="tutorials/typescript-patterns.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <!-- Card 4 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-600 to-yellow-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center text-orange-600 mb-6"><i data-lucide="code-2"></i></div>
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">고급 TypeScript 패턴</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">Generic, Conditional Types 등 고급 기능을 활용하여 타입 안전성이 보장되는 견고한 라이브러리를 설계합니다.</p>
+                    <a href="tutorials/typescript-patterns.html" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all">튜토리얼 보기 <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
         </div>
     </main>

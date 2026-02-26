@@ -27,35 +27,55 @@
             <p class="text-xl text-slate-600 dark:text-slate-400 font-medium">개발자 커리어와 기술적 깊이를 더해줄 심층 가이드</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i data-lucide="box"></i></div>
-                <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">아키텍처 가이드</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">마이크로서비스에서 모노리스까지, 프로젝트 규모에 맞는 최적의 구조 설계 전략.</p>
-                <a href="guides/architecture-guide.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            <!-- Guide 1 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 mb-6"><i data-lucide="box"></i></div>
+                    <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">아키텍처 가이드</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">마이크로서비스에서 모노리스까지, 프로젝트 규모에 맞는 최적의 구조 설계 전략.</p>
+                    <a href="guides/architecture-guide.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 mb-6"><i data-lucide="zap"></i></div>
-                <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">성능 최적화</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">웹 바이탈 수치를 개선하고 사용자 경험을 극대화하는 프론트엔드 최적화 체크리스트.</p>
-                <a href="guides/performance-optimization.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            <!-- Guide 2 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl flex items-center justify-center text-indigo-600 mb-6"><i data-lucide="zap"></i></div>
+                    <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">성능 최적화</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">웹 바이탈 수치를 개선하고 사용자 경험을 극대화하는 프론트엔드 최적화 체크리스트.</p>
+                    <a href="guides/performance-optimization.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center text-red-600 mb-6"><i data-lucide="shield"></i></div>
-                <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">보안 체크리스트</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">현대적인 웹 애플리케이션이 반드시 갖춰야 할 필수 보안 가이드와 방어 기법.</p>
-                <a href="guides/security-checklist.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            <!-- Guide 3 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-red-600 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+                    <div class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-xl flex items-center justify-center text-red-600 mb-6"><i data-lucide="shield"></i></div>
+                    <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">보안 체크리스트</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">현대적인 웹 애플리케이션이 반드시 갖춰야 할 필수 보안 가이드와 방어 기법.</p>
+                    <a href="guides/security-checklist.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i data-lucide="trending-up"></i></div>
-                <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">시니어 로드맵</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">기술적 역량을 넘어 영향력을 확장하고, 팀을 리딩하는 엔지니어로 성장하는 경로.</p>
-                <a href="guides/senior-roadmap.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            <!-- Guide 4 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 mb-6"><i data-lucide="trending-up"></i></div>
+                    <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">시니어 로드맵</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">기술적 역량을 넘어 영향력을 확장하고, 팀을 리딩하는 엔지니어로 성장하는 경로.</p>
+                    <a href="guides/senior-roadmap.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
-            <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg scroll-reveal hover:-translate-y-2 transition-all">
-                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center text-green-600 mb-6"><i data-lucide="smile"></i></div>
-                <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">멘탈 헬스 케어</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">번아웃을 방지하고 장기적으로 몰입할 수 있는 개발자의 건강한 심리 관리법.</p>
-                <a href="guides/mental-health.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            <!-- Guide 5 -->
+            <div class="group relative scroll-reveal">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
+                <div class="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center text-green-600 mb-6"><i data-lucide="smile"></i></div>
+                    <h2 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">멘탈 헬스 케어</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow">번아웃을 방지하고 장기적으로 몰입할 수 있는 개발자의 건강한 심리 관리법.</p>
+                    <a href="guides/mental-health.html" class="text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">읽어보기 <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
         </div>
     </main>
