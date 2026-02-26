@@ -30,34 +30,75 @@
         </div>
     </header>
 
-    <main class="py-20 max-w-3xl mx-auto px-6">
+    <main class="py-20 max-w-4xl mx-auto px-6">
         <article class="scroll-reveal">
             <header class="mb-12">
-                <div class="flex items-center gap-2 text-blue-600 font-bold text-sm mb-4 uppercase tracking-wider">
+                <div class="flex items-center gap-2 text-green-600 font-bold text-sm mb-4 uppercase tracking-wider">
                     <i data-lucide="tag" class="w-4 h-4"></i> CLI
                 </div>
-                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">터미널 환경 구축 가이드: Oh My Zsh와 Starship으로 생산성 높이기</h1>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">[심층 가이드] 검은 화면의 예술: 2026년형 궁극의 터미널 워크플로우 구축하기</h1>
                 <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
                     <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 23</div>
-                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Admin</div>
+                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> 시스템 아키텍트 박도준</div>
                 </div>
             </header>
 
-            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8">
-                <p class="text-xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">터미널은 개발자에게 제2의 집입니다. 하루에도 수백 번 입력하는 명령어들, 그 과정에서 발생하는 사소한 불편함들이 모여 큰 시간 낭비가 됩니다. 단순한 텍스트 입력을 넘어 최고의 터미널 환경을 구축해 보겠습니다.</p>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8 leading-relaxed text-justify">
+                <p class="text-xl font-medium text-slate-700 dark:text-slate-300 mb-8">
+                    그래픽 사용자 인터페이스(GUI)가 아무리 발전해도, 진정한 파워 유저와 엔지니어의 고향은 결국 터미널(CLI)입니다. 텍스트 명령어를 통해 시스템과 직접 대화하는 이 공간은 개발자의 생산성이 결정되는 최전선이기도 합니다. 하지만 기본 셸 설정만으로는 2026년의 복잡한 개발 환경을 감당하기 어렵습니다. 오늘은 단순한 코딩 도구를 넘어, 하나의 예술 작품과 같은 심미성과 강력한 기능을 겸비한 '궁극의 터미널 환경'을 구축하는 방법을 단계별로 파헤쳐 보겠습니다.
+                </p>
 
-                <h2 class="text-2xl font-bold mt-12 mb-6">1. Oh My Zsh: 쉘 관리의 중추</h2>
-                <p>기본 Bash나 Zsh는 기능이 제한적입니다. Oh My Zsh는 수천 명의 오픈 소스 기여자들이 만든 플러그인과 테마를 손쉽게 관리하게 해줍니다. `zsh-autosuggestions` 플러그인을 활성화하면 타이핑 횟수를 80% 이상 줄일 수 있습니다.</p>
-                
-                <h2 class="text-2xl font-bold mt-12 mb-6">2. Starship: 속도와 미학을 모두 잡은 프롬프트</h2>
-                <p>Rust 언어로 작성된 Starship은 매우 빠르면서도 필요한 정보를 지능적으로 보여줍니다. 현재 사용 중인 Node.js 버전, Python 가상 환경 이름 등을 자동으로 표시해 줍니다.</p>
-                
-                <h2 class="text-2xl font-bold mt-12 mb-6">3. fzf (Fuzzy Finder): 검색의 혁명</h2>
-                <p>fzf는 파일 검색, 명령어 히스토리 검색, 심지어 Git 브랜치 이동까지 순식간에 처리합니다. `Ctrl + R`을 눌러 과거 명령어를 찾아내는 쾌감을 느껴보세요.</p>
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-green-600 pl-4">왜 터미널 환경에 투자해야 하는가?</h2>
+                <p>
+                    평균적인 개발자는 하루 업무 시간의 30% 이상을 터미널에서 보냅니다. 디렉토리를 이동하고, Git 커밋을 하고, 스크립트를 실행하는 과정에서 발생하는 단 1초의 지연이나 가독성 저하는 하루 전체로 따지면 막대한 손실입니다. 잘 구축된 터미널 환경은 현재 프로젝트의 상태, Git 브랜치 정보, 사용 중인 언어 버전 등을 시각적으로 즉시 전달하여 인지 부하를 줄여줍니다. 또한, 강력한 자동 완성 기능은 오타로 인한 시간 낭비를 원천 차단합니다.
+                </p>
 
-                <div class="mt-16 p-8 bg-green-50 dark:bg-green-900/20 rounded-3xl border border-green-100 dark:border-green-800">
-                    <h3 class="text-xl font-bold text-green-900 dark:text-green-100 mb-4">마치며</h3>
-                    <p class="text-green-800 dark:text-green-200">잘 벼려진 칼이 훌륭한 요리를 만들 듯, 최적화된 터미널은 당신의 코딩 리듬을 끊기지 않게 합니다. 자신만의 '홈 디렉토리'를 완성해 보시기 바랍니다.</p>
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-green-600 pl-4">단계 1: 셸의 제왕, Zsh와 Oh My Zsh</h2>
+                <p>
+                    macOS와 다양한 리눅스 배포판의 기본 셸이 된 Zsh는 Bash의 기능을 모두 포함하면서도 훨씬 강력한 확장성을 제공합니다. 여기에 'Oh My Zsh' 프레임워크를 더하면 수백 개의 플러그인과 테마를 손쉽게 관리할 수 있습니다. 
+                </p>
+                <div class="bg-slate-900 text-green-400 p-6 rounded-2xl font-mono text-sm my-6 overflow-x-auto">
+                    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+                </div>
+                <p>
+                    설치 후 반드시 추가해야 할 필수 플러그인은 다음과 같습니다:
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>zsh-autosuggestions:</strong> 과거 입력한 명령어를 기반으로 회색 텍스트의 자동 완성을 제안합니다. 타자량을 80% 이상 줄여주는 마법 같은 도구입니다.</li>
+                    <li><strong>zsh-syntax-highlighting:</strong> 명령어가 올바른지 실시간으로 색상을 통해 알려줍니다. 엔터를 치기 전에 오타를 발견할 수 있습니다.</li>
+                    <li><strong>autojump / z:</strong> 디렉토리 이동을 비약적으로 빠르게 만듭니다. `cd`를 여러 번 칠 필요 없이 `z project` 한 번으로 깊숙한 폴더까지 이동합니다.</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-green-600 pl-4">단계 2: 차세대 프롬프트, Starship</h2>
+                <p>
+                    과거에는 복잡한 Zsh 테마 설정이 시스템 성능을 저하시키는 주범이었습니다. 하지만 Rust로 작성된 'Starship'은 비할 데 없는 속도와 범용성을 자랑합니다. 어떤 셸을 사용하든 동일한 설정을 공유할 수 있으며, 무엇보다 '지연 시간 제로'에 가까운 성능을 보여줍니다.
+                </p>
+                <p>
+                    Starship의 진가는 컨텍스트 인식 기능에 있습니다. Rust 폴더에 들어가면 게 버전 아이콘이 나타나고, Node.js 프로젝트에서는 노드 버전이 표시됩니다. AWS 자격 증명이 활성화되어 있는지, 쿠버네티스 컨텍스트가 어디인지 프롬프트에서 즉시 확인할 수 있습니다.
+                </p>
+
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-green-600 pl-4">단계 3: 현대적 CLI 도구로의 교체 (Rust 기반 에코시스템)</h2>
+                <p>
+                    수십 년 된 유닉스 표준 도구들을 최신 Rust 기반 도구들로 교체하는 것만으로도 터미널 경험은 완전히 달라집니다.
+                </p>
+                <ul class="list-disc pl-6 space-y-4">
+                    <li><strong>exa (or eza) 대신 ls:</strong> 더 예쁜 색상과 아이콘, 그리고 트리 뷰를 지원합니다.</li>
+                    <li><strong>bat 대신 cat:</strong> 구문 강조(Syntax Highlighting)와 Git 통합 기능을 갖춘 cat의 상위 호환입니다.</li>
+                    <li><strong>fd 대신 find:</strong> 훨씬 빠르고 직관적인 문법으로 파일을 찾습니다.</li>
+                    <li><strong>ripgrep (rg) 대신 grep:</strong> 비교할 수 없는 속도로 코드 텍스트를 검색합니다.</li>
+                    <li><strong>fzf (Fuzzy Finder):</strong> 파일 찾기, 히스토리 검색 등을 인터랙티브하게 만들어주는 터미널의 필수 요소입니다.</li>
+                </ul>
+
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-green-600 pl-4">단계 4: 터미널 에뮬레이터의 선택 (Warp vs WezTerm)</h2>
+                <p>
+                    2026년 현재, 터미널 에뮬레이터 시장은 두 강자가 지배하고 있습니다. AI 협업 기능과 블록 단위 명령 관리를 선호한다면 <strong>Warp</strong>를, 극강의 커스터마이징과 Lua 스크립팅을 통한 성능 최적화를 원한다면 <strong>WezTerm</strong>을 추천합니다. 두 도구 모두 GPU 가속을 활용하여 텍스트 렌더링 속도가 매우 빠르며, 수천 줄의 로그도 끊김 없이 출력합니다.
+                </p>
+
+                <div class="mt-20 p-10 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-slate-900 dark:to-emerald-950 rounded-3xl border border-green-100 dark:border-green-800 shadow-inner">
+                    <h3 class="text-2xl font-bold text-green-900 dark:text-green-100 mb-6">마치며: 나만의 도구를 다듬는 마음가짐</h3>
+                    <p class="text-green-800 dark:text-slate-300 leading-relaxed">
+                        터미널 환경 구축은 한 번에 끝나는 프로젝트가 아닙니다. 매일 조금씩 자신의 불편함을 발견하고, 그 불편함을 해결해 줄 도구나 앨리어스(alias)를 추가하는 과정 자체가 개발자의 성장 과정이기도 합니다. 2026년의 터미널은 단순한 입력창이 아니라, 개발자의 사고를 확장시켜 주는 지능형 파트너입니다. 오늘 소개한 도구들이 여러분의 검은 화면을 더욱 밝고 활기차게 만들어주길 바랍니다. 여러분의 `.zshrc` 파일은 지금 어떤 이야기를 담고 있나요?
+                    </p>
                 </div>
             </div>
 

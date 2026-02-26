@@ -30,34 +30,93 @@
         </div>
     </header>
 
-    <main class="py-20 max-w-3xl mx-auto px-6">
+    <main class="py-20 max-w-4xl mx-auto px-6">
         <article class="scroll-reveal">
             <header class="mb-12">
-                <div class="flex items-center gap-2 text-blue-600 font-bold text-sm mb-4 uppercase tracking-wider">
-                    <i data-lucide="tag" class="w-4 h-4"></i> Code Quality
+                <div class="flex items-center gap-2 text-yellow-600 font-bold text-sm mb-4 uppercase tracking-wider">
+                    <i data-lucide="tag" class="w-4 h-4"></i> Clean Code
                 </div>
-                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">현대 자바스크립트를 위한 Clean Code 원칙: 읽기 쉬운 코드가 좋은 코드다</h1>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">[코드 가이드] 읽기 좋은 코드가 예술이다: 2026년형 자바스크립트 클린 코드 원칙</h1>
                 <div class="flex items-center gap-4 text-slate-500 dark:text-slate-400">
                     <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4"></i> 2026. 02. 17</div>
-                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> Admin</div>
+                    <div class="flex items-center gap-2"><i data-lucide="user" class="w-4 h-4"></i> 풀스택 개발자 정은지</div>
                 </div>
             </header>
 
-            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8">
-                <p class="text-xl leading-relaxed font-medium text-slate-700 dark:text-slate-300">코드는 기계가 실행하기 위해서만 존재하는 것이 아니라, 사람이 읽고 이해하기 위해 존재합니다. 유지보수가 쉽고 확장에 유연한 자바스크립트 코드를 작성하기 위한 핵심 원칙들을 소개합니다.</p>
+            <div class="prose prose-lg prose-slate dark:prose-invert max-w-none space-y-8 leading-relaxed text-justify">
+                <p class="text-xl font-medium text-slate-700 dark:text-slate-300 mb-8">
+                    "코드는 컴퓨터가 이해하기 위해서가 아니라, 사람이 이해하기 위해 작성하는 것이다." 켄트 벡의 이 오래된 격언은 AI가 코드를 생성하는 2026년에도 여전히 유효합니다. 아니, 오히려 AI가 쏟아내는 수많은 코드 더미 속에서 진주를 가려내고 유지보수 가능한 상태로 관리해야 하는 현재, 클린 코드(Clean Code)의 가치는 그 어느 때보다 빛을 발합니다. 오늘은 자바스크립트와 타입스크립트 환경에서 코드의 가독성, 유지보수성, 그리고 확장성을 극대화하기 위한 현대적인 클린 코드 기법들을 정리해 봅니다.
+                </p>
 
-                <h2 class="text-2xl font-bold mt-12 mb-6">1. 의미 있는 변수명과 함수명</h2>
-                <p>변수 이름에 데이터 타입을 넣거나(userListArray), 모호한 약어(data1)를 사용하는 것을 피하세요. 이름만 봐도 이 변수가 어떤 역할을 하는지 알 수 있어야 합니다.</p>
-                
-                <h2 class="text-2xl font-bold mt-12 mb-6">2. 함수의 단일 책임 원칙 (SRP)</h2>
-                <p>하나의 함수는 오직 한 가지 일만 수행해야 합니다. 함수가 길어지고 'and'라는 단어로 설명된다면, 더 작은 함수로 쪼개야 할 신호입니다.</p>
-                
-                <h2 class="text-2xl font-bold mt-12 mb-6">3. 매개변수 최소화와 객체 활용</h2>
-                <p>함수의 매개변수가 3개 이상이라면 객체로 전달하는 것을 고려하세요. 순서에 의존하지 않고 각 인자의 의미를 명확히 알 수 있습니다.</p>
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-yellow-500 pl-4">1. 의미 있는 이름 짓기: 변수명은 설명서다</h2>
+                <p>
+                    `data`, `info`, `temp` 같은 이름은 코드의 의도를 숨깁니다. 훌륭한 변수명은 그 자체로 주석의 역할을 해야 합니다. 2026년의 개발자들은 의도를 분명히 드러내는 이름을 짓기 위해 고군분투합니다.
+                </p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li><strong>나쁜 예:</strong> `const d = new Date();`</li>
+                    <li><strong>좋은 예:</strong> `const currentTimestamp = new Date();`</li>
+                    <li><strong>함수는 동사로:</strong> `getUserData` 보다는 `fetchUserProfile`이 더 구체적인 동작을 설명합니다.</li>
+                </ul>
 
-                <div class="mt-16 p-8 bg-yellow-50 dark:bg-yellow-900/20 rounded-3xl border border-yellow-100 dark:border-yellow-800">
-                    <h3 class="text-xl font-bold text-yellow-900 dark:text-yellow-100 mb-4">Clean Code는 배려입니다</h3>
-                    <p class="text-yellow-800 dark:text-yellow-200">오늘 작성한 코드를 6개월 뒤의 당신이 다시 읽는다고 상상해 보세요. 미래의 당신이 고마워할 수 있도록 코드를 정돈하세요.</p>
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-yellow-500 pl-4">2. 함수는 오직 한 가지 일만 해야 한다 (SRP)</h2>
+                <p>
+                    하나의 함수가 데이터를 가져오고, 가공하고, 화면에 그리기까지 한다면 그 함수는 '괴물'이 됩니다. 함수를 작게 쪼개고 각각의 함수가 단 하나의 책임(Single Responsibility)만 지게 하세요. 이는 테스트를 쉽게 만들고, 코드 재사용성을 높여줍니다. 만약 함수 이름에 `And`나 `Or`가 들어간다면, 그 함수는 이미 너무 많은 일을 하고 있다는 신호입니다.
+                </p>
+
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-yellow-500 pl-4">3. 부정문보다는 긍정문을 사용하라</h2>
+                <p>
+                    `if (!isNotValid)`와 같은 이중 부정은 뇌의 처리 속도를 늦춥니다. 가능한 한 긍정문(`if (isValid)`)을 사용하여 로직을 단순화하세요. 또한, 복잡한 조건문은 변수나 함수로 추출하여 이름을 붙여주는 것이 좋습니다. "왜 이 조건이 필요한가"를 코드가 직접 설명하게 하세요.
+                </p>
+
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-yellow-500 pl-4">4. Early Return 패턴의 활용</h2>
+                <p>
+                    깊게 중첩된 `if-else` 문은 '장풍 코드'를 만듭니다. 예외 상황이나 조건이 맞지 않는 경우를 함수 시작 부분에서 먼저 처리하고 반환(return)하세요. 이렇게 하면 함수의 주요 로직이 들여쓰기 없이 깔끔하게 유지되어 흐름을 파악하기 훨씬 쉬워집니다.
+                </p>
+
+                <h3 class="text-2xl font-bold mt-12 mb-6 text-slate-800 dark:text-slate-200">Before & After 예시</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                    <div class="p-6 bg-red-50 dark:bg-red-900/20 rounded-2xl border border-red-100 dark:border-red-800">
+                        <h4 class="font-bold text-red-600 mb-4">Bad Practice</h4>
+                        <pre class="text-xs font-mono text-slate-600 dark:text-slate-400 overflow-x-auto">
+function p(u) {
+  if (u !== null) {
+    if (u.a > 18) {
+      send(u);
+    } else {
+      alert('too young');
+    }
+  }
+}
+                        </pre>
+                    </div>
+                    <div class="p-6 bg-green-50 dark:bg-green-900/20 rounded-2xl border border-green-100 dark:border-green-800">
+                        <h4 class="font-bold text-green-600 mb-4">Clean Code</h4>
+                        <pre class="text-xs font-mono text-slate-600 dark:text-slate-400 overflow-x-auto">
+function processUser(user) {
+  if (!user) return;
+  
+  const isAdult = user.age > 18;
+  if (!isAdult) {
+    alert('미성년자는 접근할 수 없습니다.');
+    return;
+  }
+  
+  sendNotification(user);
+}
+                        </pre>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold mt-16 mb-8 border-l-4 border-yellow-500 pl-4">5. 매직 넘버(Magic Number)를 상수로 치환하라</h2>
+                <p>
+                    코드 중간에 튀어나오는 `86400` 같은 숫자는 무엇을 의미하는지 알기 어렵습니다. `SECONDS_IN_A_DAY`와 같이 명확한 이름을 가진 상수로 정의하세요. 이는 코드의 가독성을 높일 뿐만 아니라, 나중에 값이 변경될 때 단 한 곳만 수정하면 되는 유지보수의 이점을 제공합니다.
+                </p>
+
+                <div class="mt-20 p-10 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-slate-900 dark:to-yellow-950 rounded-3xl border border-yellow-100 dark:border-yellow-800 shadow-inner text-center">
+                    <h3 class="text-2xl font-bold text-yellow-900 dark:text-yellow-100 mb-6">마치며: 클린 코드는 배려다</h3>
+                    <p class="text-yellow-800 dark:text-slate-300 leading-relaxed">
+                        클린 코드는 단순히 보기 좋은 코드를 짜는 기술이 아닙니다. 그것은 미래의 나, 그리고 함께 일하는 동료들에 대한 '최고의 배려'입니다. 오늘 여러분이 무심코 남긴 '돌아가기만 하는 코드'는 내일 누군가의 밤샘 작업 원인이 될 수 있습니다. 매 커밋마다 조금씩 더 깨끗한 코드를 남기려 노력해 보세요. 보이스카우트 규칙처럼, 캠프장을 떠날 때 처음 왔을 때보다 더 깨끗하게 만드는 마음가짐이 훌륭한 엔지니어를 만듭니다.
+                    </p>
                 </div>
             </div>
 
